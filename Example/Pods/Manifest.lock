@@ -1,16 +1,23 @@
 PODS:
-  - ScaleCodecSwift (0.1.0)
+  - BigInt (5.2.0)
+  - ScaleCodecSwift (1.0.0):
+    - BigInt
 
 DEPENDENCIES:
   - ScaleCodecSwift (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - BigInt
 
 EXTERNAL SOURCES:
   ScaleCodecSwift:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ScaleCodecSwift: 179b6ddc31bb8528d380fd19166a2a9fddc03e86
+  BigInt: f668a80089607f521586bbe29513d708491ef2f7
+  ScaleCodecSwift: 5675e89ca0c9e5492577c5ba5e0e36e8520cb271
 
-PODFILE CHECKSUM: eef510782536c545ce866fb495ea308eae3f0286
+PODFILE CHECKSUM: b0b0e44d16f4d236da3a63774db5a1a4051b2d3b
 
 COCOAPODS: 1.11.3

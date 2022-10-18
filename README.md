@@ -1,6 +1,5 @@
 # ScaleCodecSwift
 
-[![CI Status](https://img.shields.io/travis/TigranIsk/ScaleCodecSwift.svg?style=flat)](https://travis-ci.org/TigranIsk/ScaleCodecSwift)
 [![Version](https://img.shields.io/cocoapods/v/ScaleCodecSwift.svg?style=flat)](https://cocoapods.org/pods/ScaleCodecSwift)
 [![License](https://img.shields.io/cocoapods/l/ScaleCodecSwift.svg?style=flat)](https://cocoapods.org/pods/ScaleCodecSwift)
 [![Platform](https://img.shields.io/cocoapods/p/ScaleCodecSwift.svg?style=flat)](https://cocoapods.org/pods/ScaleCodecSwift)
@@ -22,8 +21,8 @@ pod 'ScaleCodecSwift'
 
 ## Author
 
-TigranIsk, tiskandaryan@griddynamics.com
+Tigran Iskandaryan, tiger@sublab.dev
 
 ## License
 
-ScaleCodecSwift is available under the MIT license. See the LICENSE file for more info.
+ScaleCodecSwift is available under the Apache 2.0 license. See the LICENSE file for more info.

@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  ScaleCodecSwift
-//
-//  Created by TigranIsk on 10/17/2022.
-//  Copyright (c) 2022 TigranIsk. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
