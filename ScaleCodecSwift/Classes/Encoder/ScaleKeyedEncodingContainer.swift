@@ -33,6 +33,21 @@ final class ScaleKeyedEncodingContainer<K: CodingKey>: KeyedEncodingContainerPro
         self.adapterProvider = adapterProvider
         self.codingPath = codingPath
         self.userInfo = userInfo
+        
+        encodeIndexIfNeeded()
+    }
+    
+    // This method is used only for Enums
+    private func encodeIndexIfNeeded() {
+        guard let index = codingPath.first?.intValue else {
+            return
+        }
+        
+        do {
+            try nestedSingleValueEncodingContainer().encode(UInt8(index))
+        } catch {
+            assertionFailure()
+        }
     }
     
     // MARK: - Encoding
@@ -178,11 +193,19 @@ final class ScaleKeyedEncodingContainer<K: CodingKey>: KeyedEncodingContainerPro
         }
     }
     
-    private func nestedCodingPath(forKey key: CodingKey) -> [CodingKey] {
-        codingPath + [key]
+    func encodeConditional<T>(_ object: T, forKey key: K) throws where T : AnyObject, T : Encodable {
+        print("[encodeConditional]")
     }
     
-    private func nestedSingleValueEncodingContainer(forKey key: K, append: Bool = true) -> ScaleSingleValueEncodingContainer {
+    private func nestedCodingPath(forKey key: CodingKey? = nil) -> [CodingKey] {
+        if let key = key {
+            return codingPath + [key]
+        }
+         
+        return codingPath
+    }
+    
+    private func nestedSingleValueEncodingContainer(forKey key: K? = nil, append: Bool = true) -> ScaleSingleValueEncodingContainer {
         let container = ScaleSingleValueEncodingContainer(
             encoderProvider: encoderProvider,
             adapterProvider: adapterProvider,
@@ -204,7 +227,8 @@ final class ScaleKeyedEncodingContainer<K: CodingKey>: KeyedEncodingContainerPro
         let container = ScaleKeyedEncodingContainer<NestedKey>(
             encoderProvider: encoderProvider,
             adapterProvider: adapterProvider,
-            codingPath: codingPath, userInfo: userInfo
+            codingPath: nestedCodingPath(forKey: key),
+            userInfo: userInfo
         )
         
         containers.append(container)
@@ -215,7 +239,7 @@ final class ScaleKeyedEncodingContainer<K: CodingKey>: KeyedEncodingContainerPro
         let container = ScaleUnkeyedEncodingContainer(
             encoderProvider: encoderProvider,
             adapterProvider: adapterProvider,
-            codingPath: codingPath,
+            codingPath: nestedCodingPath(forKey: key),
             userInfo: userInfo
         )
         

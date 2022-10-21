@@ -1,7 +1,6 @@
 import Foundation
 
 struct TypeWrapper: Hashable {
-    
     let type: Any.Type
     
     func hash(into hasher: inout Hasher) {
@@ -9,19 +8,6 @@ struct TypeWrapper: Hashable {
     }
     
     static func == (lhs: TypeWrapper, rhs: TypeWrapper) -> Bool {
-        lhs.hashValue == rhs.hashValue
-    }
-}
-
-struct TypeWrapper2: Hashable {
-    
-    let type: Any.Type
-    
-    func hash(into hasher: inout Hasher) {
-        String(describing: type).hash(into: &hasher)
-    }
-    
-    static func == (lhs: TypeWrapper2, rhs: TypeWrapper2) -> Bool {
         lhs.hashValue == rhs.hashValue
     }
 }
@@ -58,9 +44,7 @@ final class GenericAdapter<T>: ScaleCodecAdapter<T> {
     }
     
     override func read(_ type: T.Type, from reader: DataReader) throws -> T {
-//        let lastOffset = reader.offset
-        
-        if let type = type as? ScaleGenericCodable.Type {
+       if let type = type as? ScaleGenericCodable.Type {
             if let value = try type.init(from: reader, coder: coder) as? T {
                 return value
             } else {
@@ -69,7 +53,6 @@ final class GenericAdapter<T>: ScaleCodecAdapter<T> {
             }
         }
         
-//        reader.offset = lastOffset
         throw ScaleCodecAdapterProvider.Error.noAdapterFound
     }
     
@@ -83,7 +66,6 @@ final class GenericAdapter<T>: ScaleCodecAdapter<T> {
 }
 
 open class ScaleCodecAdapterProvider {
-    
     enum Error: Swift.Error {
         case noOptionalAdapterProvided
         case noGenericAdapterProvided
@@ -140,7 +122,6 @@ open class ScaleCodecAdapterProvider {
 // MARK: - Private
 
 private extension ScaleCodecAdapterProvider {
-    
     var encoder: ScaleEncoder {
         coder.encoder
     }
@@ -153,7 +134,6 @@ private extension ScaleCodecAdapterProvider {
 // MARK: - Default Adapter Provider
 
 final class DefaultScaleCodecAdapterProvider: ScaleCodecAdapterProvider {
-    
     override init() {
         super.init()
         
@@ -281,7 +261,6 @@ final class DefaultScaleCodecAdapterProvider: ScaleCodecAdapterProvider {
 // MARK: - GenericAdapterProviderFactory
 
 struct GenericAdapterProviderFactory: ScaleCodecAdapterFactory {
-    
     private let coder: ScaleCoder
     
     init(coder: ScaleCoder) {

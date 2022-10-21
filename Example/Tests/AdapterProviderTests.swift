@@ -2,7 +2,6 @@ import XCTest
 @testable import ScaleCodecSwift
 
 class AdapterProviderTests: XCTestCase {
-    
     func testProvider() {
         let scaleAdapterProvider = ScaleCodecAdapterProvider()
         let coder = ScaleCoder(
@@ -26,7 +25,6 @@ class AdapterProviderTests: XCTestCase {
 }
 
 class DefaultAdapterProviderTests: XCTestCase {
-    
     func testDefaultAdapterProviderForArray() {
         let adapter = try? DefaultScaleCodecAdapterProvider().adapter(for: [Int].self)
         XCTAssertNotNil(adapter)

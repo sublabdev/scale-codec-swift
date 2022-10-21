@@ -2,7 +2,6 @@ import BigInt
 import Foundation
 
 struct TestingStruct: Codable, Equatable {
-    
     let stringValue: String
     let optionalStringValue: String?
     var stringNilValue: String? = nil

@@ -1,7 +1,6 @@
 import Foundation
 
 class ArrayAdapter<T: Codable>: ScaleCodecAdapter<[T]> {
-    
     private let coder: ScaleCoder
     
     init(coder: ScaleCoder) {
@@ -21,7 +20,6 @@ class ArrayAdapter<T: Codable>: ScaleCodecAdapter<[T]> {
 }
 
 extension Array: ScaleGenericCodable where Element: Codable {
-    
     init(from reader: DataReader, coder: ScaleCoder) throws {
         self = try ArrayAdapter(coder: coder).read([Element].self, from: reader)
     }

@@ -1,6 +1,6 @@
 import Foundation
 
-protocol Encoding {
+protocol ScaleEncoding {
     func encode<T>(_ value: T) throws -> Data where T : Encodable
 }
 
@@ -31,8 +31,7 @@ extension ScaleEncoderProvider {
 
 // MARK: - Encoding, ScaleEncoderProvider
 
-final class ScaleEncoder: Encoding, ScaleEncoderProvider {
-    
+public final class ScaleEncoder: ScaleEncoding, ScaleEncoderProvider {
     private let codingPath: [CodingKey]
     private let userInfo: [CodingUserInfoKey: Any]
     private let adapterProvider: ScaleCodecAdapterProvider
@@ -53,8 +52,8 @@ final class ScaleEncoder: Encoding, ScaleEncoderProvider {
     ) -> Encoder & ScaleEncodingContainer {
         ScaleEncoderContainer(
             provider: self,
-            adapterProvider: adapterProvider
-            , codingPath: codingPath,
+            adapterProvider: adapterProvider,
+            codingPath: codingPath,
             userInfo: userInfo
         )
     }
@@ -76,8 +75,8 @@ final class ScaleEncoder: Encoding, ScaleEncoderProvider {
     }
 }
 
+// MARK: - ScaleEncoderContainer
 private final class ScaleEncoderContainer: Encoder, ScaleEncodingContainer {
-    
     var codingPath: [CodingKey]
     var userInfo: [CodingUserInfoKey: Any]
     

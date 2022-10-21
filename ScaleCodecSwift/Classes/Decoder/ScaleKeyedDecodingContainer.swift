@@ -33,6 +33,27 @@ final class ScaleKeyedDecodingContainer<K: CodingKey>: KeyedDecodingContainerPro
         self.adapterProvider = adapterProvider
         self.codingPath = codingPath
         self.userInfo = userInfo
+        
+        tryDecodeIndex()
+    }
+    
+    private func tryDecodeIndex() {
+        let currentOffset = dataReader.offset
+        let index: UInt8
+        
+        do {
+            index = try nestedSingleValueDecodingContainer().decode(UInt8.self)
+        } catch {
+            dataReader.offset = currentOffset
+            return
+        }
+        
+        guard let key = K(intValue: Int(index)) else {
+            dataReader.offset = currentOffset
+            return
+        }
+        
+        allKeys = [key]
     }
     
     // MARK: - Decoding
@@ -174,14 +195,16 @@ final class ScaleKeyedDecodingContainer<K: CodingKey>: KeyedDecodingContainerPro
         }
     }
     
-    private func nestedCodingPath(forKey key: CodingKey) -> [CodingKey] {
-        codingPath + [key]
+    private func nestedCodingPath(forKey key: CodingKey? = nil) -> [CodingKey] {
+        if let key = key {
+            return codingPath + [key]
+        }
+         
+        return codingPath
     }
     
-    private func nestedSingleValueDecodingContainer(forKey key: K) -> ScaleSingleValueDecodingContainer {
-        allKeys.append(key)
-        
-        return ScaleSingleValueDecodingContainer(
+    private func nestedSingleValueDecodingContainer(forKey key: K? = nil) -> ScaleSingleValueDecodingContainer {
+        ScaleSingleValueDecodingContainer(
             decoderProvider: decoderProvider,
             dataReader: dataReader,
             adapterProvider: adapterProvider,

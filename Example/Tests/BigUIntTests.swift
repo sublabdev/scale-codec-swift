@@ -3,7 +3,6 @@ import XCTest
 import BigInt
 
 class BigUIntTests: BaseTest<BigUInt> {
-    
     private let predefinedTestCases: [(BigUInt, String)] = [
         (BigUInt("0"), "00"),
         (BigUInt("1"), "04"),

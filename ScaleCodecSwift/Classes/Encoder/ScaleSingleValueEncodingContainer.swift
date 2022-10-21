@@ -1,7 +1,6 @@
 import Foundation
 
 final class ScaleSingleValueEncodingContainer: SingleValueEncodingContainer, ScaleEncodingContainer {
-    
     private enum ScaleSingleValueEncodingError: Swift.Error {
         case noAdapter
     }
@@ -125,6 +124,6 @@ final class ScaleSingleValueEncodingContainer: SingleValueEncodingContainer, Sca
     // MARK: - Private
     
     func write<T: Encodable>(_ value: T) throws -> Data {
-        try adapterProvider.adapter(for: T.self).write(value: value)
+        try adapterProvider.coder.encoder.encode(value)
     }
 }

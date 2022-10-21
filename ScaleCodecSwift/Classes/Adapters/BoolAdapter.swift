@@ -1,9 +1,8 @@
 import Foundation
 
 final class BoolAdapter: ScaleCodecAdapter<Bool> {
-    
     override func read(_ type: Bool.Type, from reader: DataReader) throws -> Bool {
-        reader.readByte() == 1
+        try reader.readByte() == 1
     }
     
     override func write(value: Bool) throws -> Data {
@@ -12,13 +11,12 @@ final class BoolAdapter: ScaleCodecAdapter<Bool> {
 }
 
 final class OptionalBoolAdapter: ScaleCodecAdapter<Bool?> {
-    
     private enum Error: Swift.Error {
         case invalidValue(UInt8)
     }
     
     override func read(_ type: Bool?.Type, from reader: DataReader) throws -> Bool? {
-        switch reader.readByte() {
+        switch try reader.readByte() {
         case 0: return nil
         case 1: return true
         case 2: return false

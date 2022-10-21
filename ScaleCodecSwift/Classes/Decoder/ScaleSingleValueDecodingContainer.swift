@@ -1,7 +1,6 @@
 import Foundation
 
 final class ScaleSingleValueDecodingContainer: SingleValueDecodingContainer {
-   
     private enum ScaleSingleValueDecodingError: Swift.Error {
         case noAdapter
         case decodingError
@@ -35,11 +34,15 @@ final class ScaleSingleValueDecodingContainer: SingleValueDecodingContainer {
     // MARK: - Decoding
     
     func decodeNil() -> Bool {
-        defer {
+        do {
+            let result = (((try dataReader.read(size: 1).first.map { $0 == 0b0 }) as Bool??)) == true
             dataReader.offset -= 1
+            
+            return result
+        } catch {
+            assertionFailure()
+            return false
         }
-        
-        return (((dataReader.read(size: 1).first.map { $0 == 0b0 }) as Bool??)) == true
     }
     
     func decode(_ type: Bool.Type) throws -> Bool {
@@ -97,6 +100,9 @@ final class ScaleSingleValueDecodingContainer: SingleValueDecodingContainer {
     // MARK: - Private
     
     func read<T: Decodable>(_ type: T.Type) throws -> T {
-        try adapterProvider.adapter(for: type).read(T.self, from: dataReader)
+        try adapterProvider.coder.decoder.decode(
+            T.self,
+            from: dataReader
+        )
     }
 }

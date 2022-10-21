@@ -1,10 +1,9 @@
 import Foundation
 
 class NumericAdapter<T: FixedWidthInteger>: ScaleCodecAdapter<T> where T: Codable {
-    
     override func read(_ type: T.Type, from reader: DataReader) throws -> T {
         let stride = MemoryLayout<T>.stride
-        let bytes = reader.read(size: stride)
+        let bytes = try reader.read(size: stride)
         return T(littleEndian: bytes.withUnsafeBytes { $0.load(as: T.self) })
     }
     

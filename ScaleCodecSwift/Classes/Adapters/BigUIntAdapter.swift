@@ -7,7 +7,6 @@ fileprivate enum BigUIntCompressingError: Swift.Error {
 }
 
 final class BigUIntAdapter: ScaleCodecAdapter<BigUInt> {
-    
     private let coder: ScaleCoder
     
     init(coder: ScaleCoder) {
@@ -59,7 +58,6 @@ final class BigUIntAdapter: ScaleCodecAdapter<BigUInt> {
 // Since in 'BigUInt' library we have a custom conformance to Codable which is not conforming to ScaleCodec principles
 // We need to override it with an extension conforming to ScaleGenericCodable, as we prioritize it over the default Codable implementations
 extension BigUInt: ScaleGenericCodable {
-    
     init(from reader: DataReader, coder: ScaleCoder) throws {
         self = try BigUIntAdapter(coder: coder).read(BigUInt.self, from: reader)
     }

@@ -4,7 +4,6 @@ import XCTest
 // TODO: Add missing tests
 
 class BaseTest<T: Codable>: XCTestCase where T: Equatable {
-    
     var adapter: ScaleCodecAdapter<T>?
     var optionalAdapter: ScaleCodecAdapter<T?>?
     
@@ -70,8 +69,6 @@ class BaseTest<T: Codable>: XCTestCase where T: Equatable {
             XCTAssertEqual(initialValue, decodedValue)
         }
     }
-    
-    // TODO: This is crashing for some types
     
     func testOptionalCoding() throws {
         guard let testValues = optionalTestValues else {

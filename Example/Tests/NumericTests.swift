@@ -19,5 +19,3 @@ class NumericUInt32Tests: BaseNumericTest<UInt32> { }
 class NumericUIntTests: BaseNumericTest<UInt> { }
 
 class NumericUInt64Tests: BaseNumericTest<UInt64> { }
-
-// TODO: Create UInt256Adapter

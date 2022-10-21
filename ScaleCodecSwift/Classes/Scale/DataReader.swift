@@ -1,6 +1,9 @@
 import Foundation
 
 final class DataReader {
+    private enum Error: Swift.Error {
+        case invalidDataOffset
+    }
     
     let data: Data
     var offset = 0
@@ -9,21 +12,30 @@ final class DataReader {
     init(data: Data) {
         self.data = data
     }
+    
+    var dataWithOffset: Data {
+        data[offset..<data.count]
+    }
 
-    func read(size: Int) -> [UInt8] {
+    func read(size: Int) throws -> [UInt8] {
         let endIndex = offset + size
+        
+        guard endIndex <= data.count else {
+            throw Error.invalidDataOffset
+        }
+        
         let result = data[offset..<endIndex]
         offset += size
         
         return Array(result)
     }
     
-    func readByte() -> UInt8 {
-        read(size: 1)[0]
+    func readByte() throws -> UInt8 {
+        try read(size: 1)[0]
     }
     
-    func readToEnd() -> [UInt8] {
-        read(size: data.count - offset)
+    func readToEnd() throws -> [UInt8] {
+        try read(size: data.count - offset)
     }
     
     func revert(offset: Int) {

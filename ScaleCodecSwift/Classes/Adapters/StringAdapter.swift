@@ -1,7 +1,6 @@
 import Foundation
 
 class StringAdapter: ScaleCodecAdapter<String> {
-    
     enum Error: Swift.Error {
         case readError(Data)
         case writeError(String)

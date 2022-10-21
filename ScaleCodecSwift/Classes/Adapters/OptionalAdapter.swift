@@ -1,7 +1,6 @@
 import Foundation
 
 class OptionalAdapter<T: Codable>: ScaleCodecAdapter<T?> {
-    
     private let coder: ScaleCoder
     
     init(coder: ScaleCoder) {
@@ -9,7 +8,7 @@ class OptionalAdapter<T: Codable>: ScaleCodecAdapter<T?> {
     }
     
     override func read(_ type: T?.Type, from reader: DataReader) throws -> T? {
-        let isNil = reader.readByte() == 0
+        let isNil = try reader.readByte() == 0
         
         guard !isNil else {
             return nil
@@ -29,7 +28,6 @@ class OptionalAdapter<T: Codable>: ScaleCodecAdapter<T?> {
 }
 
 extension Optional: ScaleGenericCodable where Wrapped: Codable {
-    
     init(from reader: DataReader, coder: ScaleCoder) throws {
         self = try OptionalAdapter(coder: coder).read(Wrapped?.self, from: reader)
     }

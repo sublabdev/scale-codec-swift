@@ -2,11 +2,66 @@ import BigInt
 import XCTest
 @testable import ScaleCodecSwift
 
-class StructTests: BaseTest<TestingStruct> {
+class EnumTests: BaseTest<TestingEnum> {
     override func setUp() {
         super.setUp()
+        
+        testValues = TestingEnum.allCases
+    }
+}
 
-        let testingStruct = TestingStruct(
+extension TestingEnum: CaseIterable {
+    static var allCases: [TestingEnum] = [
+        .simple,
+        .int8(1),
+        .optionalInt8(1),
+        .nilInt8(nil),
+        .int16(1),
+        .optionalInt16(1),
+        .nilInt16(nil),
+        .int32(1),
+        .optionalInt32(1),
+        .nilInt32(nil),
+        .int(1),
+        .optionalInt(1),
+        .nilInt(nil),
+        .int64(1),
+        .optionalInt64(1),
+        .nilInt64(nil),
+        .uInt8(1),
+        .optionalUInt8(1),
+        .nilUInt8(nil),
+        .uInt16(1),
+        .optionalUInt16(1),
+        .nilUInt16(nil),
+        .uInt32(1),
+        .optionalUInt32(1),
+        .nilUInt32(nil),
+        .uInt(1),
+        .optionalUInt(1),
+        .nilUInt(nil),
+        .uInt64(1),
+        .optionalUInt64(1),
+        .nilUInt64(nil),
+        .bigUInt(BigUInt("1")),
+        .optionalBigUInt(BigUInt("1")),
+        .nilBigUInt(nil),
+        .bool(true),
+        .optionalBool(true),
+        .nilBool(nil),
+        .string(UUID().uuidString),
+        .optionalString(UUID().uuidString),
+        .nilString(nil),
+        .testingStruct(createTestingStruct()),
+        .optionalTestingStruct(createTestingStruct()),
+        .nilTestingStruct(nil),
+        .array([1, 2, 3]),
+        .optionalArray([1, 2, 3]),
+        .nilArray(nil)
+    ]
+    
+    private static func createTestingStruct() -> TestingStruct {
+        .init(
             stringValue: "String Value",
             optionalStringValue: "Optional String Value",
             boolTrueValue: true,
@@ -37,7 +92,5 @@ class StructTests: BaseTest<TestingStruct> {
             arrayValue: [1, 2, 3],
             arrayOptionalValue: [1, 2, 3]
         )
-        
-        testValues = [testingStruct]
     }
 }

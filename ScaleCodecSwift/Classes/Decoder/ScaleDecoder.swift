@@ -9,12 +9,11 @@ protocol ScaleDecoderProvider {
     ) -> Decoder
 }
 
-protocol Decoding {
+protocol ScaleDecoding {
     func decode<T>(_ type: T.Type, from reader: DataReader) throws -> T where T : Decodable
 }
 
-final class ScaleDecoder: Decoding, ScaleDecoderProvider {
-    
+public final class ScaleDecoder: ScaleDecoding, ScaleDecoderProvider {
     private let codingPath: [CodingKey]
     private let userInfo: [CodingUserInfoKey: Any]
     private let adapterProvider: ScaleCodecAdapterProvider
@@ -34,14 +33,22 @@ final class ScaleDecoder: Decoding, ScaleDecoderProvider {
     }
     
     func decode<T>(_ type: T.Type, from dataReader: DataReader) throws -> T where T : Decodable {
-        if let value = try? adapterProvider.adapter(for: type).read(type, from: dataReader) {
+        let currentOffset = dataReader.offset
+        
+        do {
             // Types like Ints, Strings etc will be resolved via their custom adapters
             // Types with custom optional adapters will be resolved here as well (the main cause of this 'if' condition)
             // Other types will be resolved via GenericAdapter though types like array and all other optionals will be resolved
             // via their custom adapters
             // Struct, Enums will throw 'No adapter found' error thus should be resolved via basic containers
-            return value
+            return try adapterProvider.adapter(for: type).read(type, from: dataReader)
+        } catch ScaleCodecAdapterProvider.Error.noAdapterFound {
+            // No adapter found hence resolving via the default way
+        } catch let error {
+            throw error
         }
+        
+        dataReader.offset = currentOffset
         
         let decoder = decoder(
             dataReader: dataReader,
