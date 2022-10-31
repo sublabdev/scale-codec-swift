@@ -82,7 +82,7 @@ open class ScaleCodecAdapterProvider {
         decoder: ScaleDecoder(adapterProvider: self)
     )
     
-    open init() { }
+    public init() { }
 
     func adapter<T>(for type: T.Type) throws -> ScaleCodecAdapter<T> {
         if let adapter = (try adapterProvider(for: type)?.adapter()) as? ScaleCodecAdapter<T> {
