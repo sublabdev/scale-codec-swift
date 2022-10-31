@@ -22,7 +22,7 @@ pod 'ScaleCodecSwift'
 
 ## Author
 
-TigranIsk, tiskandaryan@griddynamics.com
+TigranIsk, tiger@sublab.dev
 
 ## License
 
