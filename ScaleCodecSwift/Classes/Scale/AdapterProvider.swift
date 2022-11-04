@@ -135,8 +135,8 @@ private extension ScaleCodecAdapterProvider {
 
 // MARK: - Default Adapter Provider
 
-final class DefaultScaleCodecAdapterProvider: ScaleCodecAdapterProvider {
-    override init() {
+final public class DefaultScaleCodecAdapterProvider: ScaleCodecAdapterProvider {
+    override public init() {
         super.init()
         
         // Bool
