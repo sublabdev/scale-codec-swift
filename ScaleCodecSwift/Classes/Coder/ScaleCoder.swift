@@ -1,6 +1,6 @@
 import Foundation
 
-class ScaleCoder {
+public final class ScaleCoder {
     let encoder: ScaleEncoder
     let decoder: ScaleDecoder
     
