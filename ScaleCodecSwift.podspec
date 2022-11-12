@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ScaleCodecSwift'
-  s.version          = '1.0.4'
+  s.version          = '1.0.0'
   s.summary          = 'Pure Swift library for Substrate\'s SCALE codec.'
 #
 #  s.description      = <<-DESC

@@ -6,14 +6,14 @@ class StringAdapter: ScaleCodecAdapter<String> {
         case writeError(String)
     }
     
-    let arrayAdapter: ArrayAdapter<UInt8>
+    let dataAdapter: DataAdapter
     
     init(coder: ScaleCoder) {
-        arrayAdapter = .init(coder: coder)
+        dataAdapter = .init(coder: coder)
     }
     
     override func read(_ type: String.Type, from reader: DataReader) throws -> String {
-        let data = try arrayAdapter.read([UInt8].self, from: reader)
+        let data = try dataAdapter.read(Data.self, from: reader)
         
         guard let result = String(data: .init(data), encoding: .utf8) else {
             throw Error.readError(.init(data))
@@ -27,6 +27,6 @@ class StringAdapter: ScaleCodecAdapter<String> {
             throw Error.writeError(value)
         }
         
-        return try arrayAdapter.write(value: data.map { $0 })
+        return try dataAdapter.write(value: data)
     }
 }

@@ -162,6 +162,9 @@ final public class DefaultScaleCodecAdapterProvider: ScaleCodecAdapterProvider {
         
         // Generic
         provideGeneric()
+        
+        // Data
+        provideData()
     }
     
     private func provideBool() {
@@ -252,6 +255,13 @@ final public class DefaultScaleCodecAdapterProvider: ScaleCodecAdapterProvider {
         setAdapter(
             StringAdapter(coder: coder),
             for: String.self
+        )
+    }
+    
+    private func provideData() {
+        setAdapter(
+            DataAdapter(coder: coder),
+            for: Data.self
         )
     }
     

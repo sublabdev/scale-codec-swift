@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00C22009B3BEB45AE5A45805DEDCC316 /* Words and Bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6DD6C0A3208287CBFAD49A720A45C5 /* Words and Bits.swift */; };
+		11920B8A291FEAE6006C4E36 /* DataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11920B89291FEAE6006C4E36 /* DataAdapter.swift */; };
 		142C6B4A97438DA990DA8A341009E249 /* ScaleUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54228E31E349D0522D5C6B75D0AB405 /* ScaleUnkeyedEncodingContainer.swift */; };
 		146B8009199A806CAAF05EC22E68153F /* AdapterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2104DF8346493FBC7A091696F38032E /* AdapterProvider.swift */; };
 		17C20D68963C252E9991CD7361723892 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169EF156A7043F57126EF1BBA75624B3 /* Codable.swift */; };
@@ -94,6 +95,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11920B89291FEAE6006C4E36 /* DataAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAdapter.swift; sourceTree = "<group>"; };
 		12DC422EFF79957B8069405113195BF1 /* Pods-ScaleCodecSwift_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ScaleCodecSwift_Example"; path = Pods_ScaleCodecSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		153414D5B4C1A63F4306E78FFD2033F8 /* Data+hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Data+hex.swift"; sourceTree = "<group>"; };
 		169EF156A7043F57126EF1BBA75624B3 /* Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Codable.swift; path = Sources/Codable.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				7B55B46AC3EA908CFD3D98FB8784EDFE /* NumericAdapter.swift */,
 				FF9D81B8D434962094B86EE40D060528 /* OptionalAdapter.swift */,
 				9418F0523C7EC7E4DF8A6121A8E70B2C /* StringAdapter.swift */,
+				11920B89291FEAE6006C4E36 /* DataAdapter.swift */,
 			);
 			name = Adapters;
 			path = ScaleCodecSwift/Classes/Adapters;
@@ -648,6 +651,7 @@
 				9B650838C9170395D582148F482C4B3A /* BigUIntAdapter.swift in Sources */,
 				5DB2A44041C34D437518EF086325913B /* BoolAdapter.swift in Sources */,
 				18766FF32641A815633AD9C4A8E7CB67 /* Data+hex.swift in Sources */,
+				11920B8A291FEAE6006C4E36 /* DataAdapter.swift in Sources */,
 				AFBB78516F230BED1AE0D83F5D679E7D /* DataReader.swift in Sources */,
 				B33D91CC1057EBA560C38E6F19A6CC94 /* NumericAdapter.swift in Sources */,
 				2413805B06A41C801B1DAF42655B4834 /* OptionalAdapter.swift in Sources */,
