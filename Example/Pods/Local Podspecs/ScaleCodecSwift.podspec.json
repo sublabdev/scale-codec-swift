@@ -20,7 +20,7 @@
   "source_files": "ScaleCodecSwift/Classes/**/*",
   "dependencies": {
     "BigInt": [
-
+      "~> 5.2"
     ],
     "CommonSwift": [
 
