@@ -71,8 +71,6 @@ extension BigUInt: ScaleGenericCodable {
 // MARK: BigUInt Extension
 
 private extension BigUInt {
-    // TODO: Check whether it's in BigEndian or LittleEndian? If Big then should be converted to LittleEndian. Get words and reverse it
-    //
     init(compressedData: Data) throws {
         self.init()
         
@@ -86,45 +84,14 @@ private extension BigUInt {
             if dataCount % UInt64.byteWidth != 0 {
                 dataCount = Int(ceil((Double(dataCount) / Double(UInt64.byteWidth)))) * UInt64.byteWidth
             }
-            
-            // UInt256: [UInt64, UInt64, UInt64, UInt64]
-            // UInt256.byteWidth = UInt64 * 4 == 8 * 4 = 32
-            // dataCount == 29
-            // dataCount = Int(ceil(29 / 8)) * 8 == 32
-            
+         
             let data = compressedData.fillingZeroesAtEnd(byteWidth: dataCount)
             self = BigUInt(Data(data.reversed()))
-//            let dataReader = DataReader(data: compressedData.fillingZeroesAtEnd(byteWidth: bitWidth / 8))
-//            let numericAdapter = NumericAdapter<UInt64>()
-//
-//            let bits = try (0..<4).map { _ in try numericAdapter.read(UInt64.self, from: dataReader) }.map { UInt($0) }
-//            self = BigUInt(words: bits)
         }
     }
     
     func compressData() -> Data {
         Data(serialize().reversed()).removingZeroesAtEnd
-//        var data: Data
-//        let littleEndianData = Data(serialize().reversed()).removingZeroesAtEnd
-//
-//        switch self {
-//        case (0..<1 << UInt8.bitWidth): data = withUnsafeBytes(of: UInt8(self), { Data($0) })
-//        case (0..<1 << UInt16.bitWidth): data = withUnsafeBytes(of: UInt16(self), { Data($0) })
-//        case (0..<1 << UInt32.bitWidth): data = withUnsafeBytes(of: UInt32(self), { Data($0) })
-//        case (0..<1 << UInt64.bitWidth): data = withUnsafeBytes(of: UInt64(self), { Data($0) })
-//        default:
-//            data = littleEndianData
-//            let serializedData = serialize().reversed()
-//            let headerValue = ((serializedData.count - 4) << 2) | 0b11
-//
-//            guard headerValue < 256 else {
-//                throw BigUIntCompressingError.tooBigValue
-//            }
-//
-//            data = Data(repeating: UInt8(headerValue), count: 1) + Data(serializedData)
-//        }
-        
-//        return data.removingZeroesAtEnd
     }
 }
 

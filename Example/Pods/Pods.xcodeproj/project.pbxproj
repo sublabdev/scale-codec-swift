@@ -7,176 +7,238 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00C22009B3BEB45AE5A45805DEDCC316 /* Words and Bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6DD6C0A3208287CBFAD49A720A45C5 /* Words and Bits.swift */; };
-		11920B8A291FEAE6006C4E36 /* DataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11920B89291FEAE6006C4E36 /* DataAdapter.swift */; };
-		142C6B4A97438DA990DA8A341009E249 /* ScaleUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54228E31E349D0522D5C6B75D0AB405 /* ScaleUnkeyedEncodingContainer.swift */; };
-		146B8009199A806CAAF05EC22E68153F /* AdapterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2104DF8346493FBC7A091696F38032E /* AdapterProvider.swift */; };
-		17C20D68963C252E9991CD7361723892 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169EF156A7043F57126EF1BBA75624B3 /* Codable.swift */; };
-		18766FF32641A815633AD9C4A8E7CB67 /* Data+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153414D5B4C1A63F4306E78FFD2033F8 /* Data+hex.swift */; };
-		2413805B06A41C801B1DAF42655B4834 /* OptionalAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9D81B8D434962094B86EE40D060528 /* OptionalAdapter.swift */; };
-		2C477453516B4635B428E442A11B3FD6 /* ScaleCodecSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40096DC7D18A9AD6E941B25BA6355381 /* ScaleCodecSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00C22009B3BEB45AE5A45805DEDCC316 /* Words and Bits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461039CD6BBDDA8CE2A441E1229AE3B /* Words and Bits.swift */; };
+		010C1BB9A41E76C8CB0AB07DEE5D468A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		03F63ED84DE500C54A0340CFD7CA10CB /* ScaleKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC62049E8B6ED705151CD56D4525F9 /* ScaleKeyedEncodingContainer.swift */; };
+		0476F42B581CD6973DDF30706C2DD1B4 /* AdapterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB68373D115EE6C47566FC35A35FC0A5 /* AdapterProvider.swift */; };
+		04AA8010F8B3354C7EF3B55A89F39E41 /* ScaleCodecSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1B8A21CE78DF2424C86F4C7CC27D2D /* ScaleCodecSwift-dummy.m */; };
+		09A14D8A7DF1C38846051289A75E7BB2 /* Int128Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB3F3DB3AAC605FBF13215670F57071 /* Int128Adapter.swift */; };
+		0F5A45515D522379C27C5D2923FD5702 /* NumericAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E62E3AAAEB6C93AA9837443ADCB4480 /* NumericAdapter.swift */; };
+		108C8E55016CB69CBC19A92A6CE15066 /* DataHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DB24FD29333E4EE9B1ECB0A8F99C27 /* DataHex.swift */; };
+		17C20D68963C252E9991CD7361723892 /* Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D185D7C2EA6915C1CC424A43728B880D /* Codable.swift */; };
+		19E8BE1D5F023E12B8CAA8277A6E11F8 /* Int256.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9B2A7E71F1590E3F6B4C7705B515BF /* Int256.swift */; };
+		1B1B0BCB46B25D6A2798B3272282EE45 /* Int512Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794A220029B8A4D6523F9EB8F20B1115 /* Int512Adapter.swift */; };
+		20EB71D4D7CAE881C3494EF9E67587DF /* BoolAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0481A025F57D0F57F78A0CD363FA1F /* BoolAdapter.swift */; };
+		21469012E1A869A26A8BD7F7A8B53C66 /* UInt512.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7E2D8BBB13FE9F3ECF7A6081CA180 /* UInt512.swift */; };
+		22A0337E9D1F344B67809B82D5698FAA /* ScaleUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59874D50AD2D3B275812A19AAA48047E /* ScaleUnkeyedEncodingContainer.swift */; };
+		2443BBC0CC5DC5BFC3C0E07513B78F17 /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EF7104F5D873364F8612A68022222F /* UInt128.swift */; };
 		3734824E06C05131A951DAAC4E363C77 /* Pods-ScaleCodecSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 554507D500D7EAB7F11FE014A9E7982F /* Pods-ScaleCodecSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		381D42ECF079E81454D3418F6DCC3B0B /* String Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C376D07742F7ADA01311652D6C96E1 /* String Conversion.swift */; };
-		393F958C4330E9ACB60AF599C685D647 /* ScaleKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB078826408FC96C3E7BD2B4B38D5B74 /* ScaleKeyedEncodingContainer.swift */; };
-		40A09F5E948345A60B856BB7C3BB5FE3 /* Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A32D8F5937203751942B84436F0134B /* Subtraction.swift */; };
-		44C9EB9D2AF855DE7157DB92FF0E22A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		45B2DFCED9B2095FE5C15FA5A58D6877 /* ScaleUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B71DF88AC123A88A13DF2570B787DF /* ScaleUnkeyedDecodingContainer.swift */; };
-		540CC89836D830624883860F4AD3EAB0 /* Floating Point Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173576D5DD7EBFD9AF6E6A8BC2750977 /* Floating Point Conversion.swift */; };
-		55D3C00883F2CA52FE8F11468E97CB50 /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A662754F67946FE36C80523F6F62A20 /* Division.swift */; };
-		5739D86AF61AF3D032F6FD37045593ED /* ScaleCodecAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5935CD949EDC415D7B656CE91A78C385 /* ScaleCodecAdapter.swift */; };
-		5BE0231DBB026F7844BF04BBEE3151DF /* ScaleSingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD905C155A9AC5EBBDA0B60E4E8CA63 /* ScaleSingleValueEncodingContainer.swift */; };
-		5DB2A44041C34D437518EF086325913B /* BoolAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A05C3CB50F1BB03DF18E921ED153E0 /* BoolAdapter.swift */; };
-		61E62F5659EAD71C91F0BB4B99811F50 /* ArrayAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBDD3FADE65527135701034A5D46523 /* ArrayAdapter.swift */; };
-		6722DCA670229327597ADC3D81BB492B /* BigInt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62F3C0C287A51DF6E535C334E2CBC3AA /* BigInt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6796D61C64428AAD7B34AE9DD156E6C7 /* ScaleEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E30068AED0A1020E0B0381A4DAD91A /* ScaleEncoder.swift */; };
-		6A6D768A74F8BFBABED2364907A2DF0C /* BigUInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6377F6A52D57630522D67863CC476A /* BigUInt.swift */; };
-		7090F68043DADD044880B9A4DDB571E7 /* BigInt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DF5F7769A0EFA2387081FB7A981FFDA /* BigInt-dummy.m */; };
-		73E1178AD16F91C80A718FB778F3534A /* Strideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEA896AB210B97BD868FD6C04EFA831 /* Strideable.swift */; };
-		77651F160816E699EC490DD9D3F9BE02 /* Shifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21ACE00CCD056C20D1BB7F94A3DC5E11 /* Shifts.swift */; };
+		381D42ECF079E81454D3418F6DCC3B0B /* String Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94442943A9400FE760069B3C5C5BB69 /* String Conversion.swift */; };
+		40A09F5E948345A60B856BB7C3BB5FE3 /* Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A13D256CC352B94BF7B93737AB8CB89 /* Subtraction.swift */; };
+		40F8AA79E56A5973DAD6060B7821108F /* ScaleDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36119FB2EF3F77986BBE4F29AEACDEE0 /* ScaleDecoder.swift */; };
+		44896A5674D816C5834AD078AF9F077F /* CommonSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF7DBEC41C279246623C2715C80A22EF /* CommonSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CC18D66ED24B323010FFB362D99447E /* ScaleSingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB343BB6739CA170F14A52281E5B69 /* ScaleSingleValueEncodingContainer.swift */; };
+		4EC6C6AA69F67460CE933C45C2E18FEB /* StringHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0006ECF4311BF5205D97DB0DA7CB897 /* StringHex.swift */; };
+		539DD8C51010B055B070673D464994C7 /* UInt256.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB85ABB2D5A5E329EAA7134E2626D48C /* UInt256.swift */; };
+		540CC89836D830624883860F4AD3EAB0 /* Floating Point Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08645A4418131AEC6B1C03CBCE981A8 /* Floating Point Conversion.swift */; };
+		55D3C00883F2CA52FE8F11468E97CB50 /* Division.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1395CB936E15F9A673D7C5371988DED9 /* Division.swift */; };
+		5AAF4A234B15D11E71D8A35CA2738AC6 /* ByteSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B52B1E19C5EA3DBBDE1B7F4EE7B73E2 /* ByteSize.swift */; };
+		5D175FE33157148CDC410E100DD75A20 /* UInt256Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2676885739EC3280FD54EEC04FE85C /* UInt256Adapter.swift */; };
+		6722DCA670229327597ADC3D81BB492B /* BigInt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 106C4A5F632E6AAADB8296E66F065A2D /* BigInt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A6D768A74F8BFBABED2364907A2DF0C /* BigUInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EF097230F3C1C3988F7291DEC1D16A /* BigUInt.swift */; };
+		6AE4CDBB17D6C92EC0DC4E6A3CD824E6 /* ScaleSingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332D2A7A8454968F2AF938E9DB12A073 /* ScaleSingleValueDecodingContainer.swift */; };
+		6EFDB9B52FD81648D5071EF0C184A74A /* StringAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E15D9CAB7C84CD870BE104D444F9C9 /* StringAdapter.swift */; };
+		7039910417370383C7313DAF80D488EF /* BigUIntAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DE04C17D4F79D96CC3481E98EB788C /* BigUIntAdapter.swift */; };
+		7090F68043DADD044880B9A4DDB571E7 /* BigInt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8D1E31B848B9C5FE6ED07745404011 /* BigInt-dummy.m */; };
+		73E1178AD16F91C80A718FB778F3534A /* Strideable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9077C1BF73CE98B04FA17DA278420151 /* Strideable.swift */; };
+		73E9B0036C2C24EED5C0A1290047F699 /* ScaleCodecAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D088D73A301EEB87A18DC2AD2600EF2 /* ScaleCodecAdapter.swift */; };
+		764F821BA98D8014DE0E1DA4EB4A8CFE /* Int512.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB6CB12D23D07605B7862BFEB1C0759 /* Int512.swift */; };
+		77651F160816E699EC490DD9D3F9BE02 /* Shifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EE325D11C6BB03D6F8D0E447D46B8A /* Shifts.swift */; };
+		790D8FB8DEA2C334251A9E179E90AA52 /* Data+Copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC441379812979B066B13863784B709 /* Data+Copy.swift */; };
 		7A5CAD942C9F2DFDC717B892746D7F7F /* Pods-ScaleCodecSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE736A8BA616C773E2060E710CC1900 /* Pods-ScaleCodecSwift_Tests-dummy.m */; };
-		81DEE0975FD2488D5C61D099F17DC3FA /* BigInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D295DBF64DC93E26BFEA6565901E0A12 /* BigInt.swift */; };
-		96AC6857726A5403D3D789B8700FA154 /* ScaleCodecSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E889C9BB9975426709BF787696F947E4 /* ScaleCodecSwift-dummy.m */; };
+		81DEE0975FD2488D5C61D099F17DC3FA /* BigInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C021EB6D9FC4A3D7B597850B7748DF1C /* BigInt.swift */; };
+		880E1167EF00335C0A17D5D272FAF446 /* Pods-ScaleCodecSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A05EA4F8043D8616ED0F1BBA99A62D91 /* Pods-ScaleCodecSwift_Example-dummy.m */; };
+		960FA42CA948C4B58F5B3C24693EF534 /* Int256Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564E1FB549B0AB2360990F189E958169 /* Int256Adapter.swift */; };
+		977C1CC6D9D96A9E06111D02B7F3194F /* UInt512Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6195BFCF8E71A2B5B2DFAA099520099A /* UInt512Adapter.swift */; };
 		9884C146807143691916493C608A32A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		9B650838C9170395D582148F482C4B3A /* BigUIntAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60654E27309582F2E2CF66F932882163 /* BigUIntAdapter.swift */; };
-		A4C039079F76B3B054F4748411E81F0A /* Pods-ScaleCodecSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17136B9A42DE29355C9CF00087C08668 /* Pods-ScaleCodecSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A81F5E7AC6A31EA09FB5B0CD5ECBA22E /* Exponentiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7728A2CD9AA973F06CD7F07BE1D052 /* Exponentiation.swift */; };
-		AFBB78516F230BED1AE0D83F5D679E7D /* DataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4694FC2B2A9BA47BC517B2437513A15A /* DataReader.swift */; };
-		B33D91CC1057EBA560C38E6F19A6CC94 /* NumericAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B55B46AC3EA908CFD3D98FB8784EDFE /* NumericAdapter.swift */; };
-		B96BCDA4AF618BF171AA502CC84FCD8F /* Data Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466D8EDB2105060876C76BC168C1D9A9 /* Data Conversion.swift */; };
-		BBC89EA26B7E9BFA01202A216BE9D5B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		A4B6E4117E7B5B4B01B6AC71FE09FD14 /* CommonSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9C7E86B55E11F223D36B6B1AA10B12 /* CommonSwift-dummy.m */; };
+		A81F5E7AC6A31EA09FB5B0CD5ECBA22E /* Exponentiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3EED44F6FCD3CC4CB1FEE0C04F9670 /* Exponentiation.swift */; };
+		B0D2E5CACB88D0F39088202DDE5C1FBA /* DataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA5E35AA45D7CC49871298F0A648D52 /* DataAdapter.swift */; };
+		B5D11800BB2FC2FC020694565B2EF412 /* UInt128Adapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135C70EE66185DD8C2D66191F7F4C281 /* UInt128Adapter.swift */; };
+		B673B3554127281E407E4E09D7AD099A /* ScaleCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91062952C196B62C9E9312F9236D84B0 /* ScaleCoder.swift */; };
+		B7048CB6045751EA7E9EFF8A3EA4FCB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		B96BCDA4AF618BF171AA502CC84FCD8F /* Data Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F78A37D8194FCCAF39EF4F71B3378FB /* Data Conversion.swift */; };
+		BC7FDC2EBA26780BEFD82C3651D5B4D6 /* Pods-ScaleCodecSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 17136B9A42DE29355C9CF00087C08668 /* Pods-ScaleCodecSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF2F5A2BD7B34AC41F0DBDDF0164DB4C /* ScaleKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDE260CF9A9E764B667DE19D72F0B19 /* ScaleKeyedDecodingContainer.swift */; };
+		C2860BF5D535DAB267AED4ECF1ACB349 /* OptionalAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60E551C65AB26790D4576CA614EB83 /* OptionalAdapter.swift */; };
+		C778C7619BC3AE9AA8D9D8D3C17CD9E6 /* ArrayAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D440BE90E2CDB61419C507FD110EB182 /* ArrayAdapter.swift */; };
 		CBC2CC340CD4CFCD60F9A30BC9E0955C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		CF1E80D95FE72D6D608931D0E6A93F7E /* ScaleSingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242AC0D88D59856495425A8C2A5CC07 /* ScaleSingleValueDecodingContainer.swift */; };
-		D1691005C5FF403516FCA539B0E8038E /* Multiplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0866DA6D3038DD38E5D125B7786DF9 /* Multiplication.swift */; };
-		D6BF0D382E2E68028AAF3CA080E941E8 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E61FC2BDAE799C8D330239D18FF574 /* Addition.swift */; };
-		D6D8E0E68BB7856F75FF13D300ABF5D9 /* ScaleCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537F3FBBACAE348B4D9AE4EE54847E63 /* ScaleCoder.swift */; };
-		D986CA1DB770692430BB93918951766F /* Pods-ScaleCodecSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A05EA4F8043D8616ED0F1BBA99A62D91 /* Pods-ScaleCodecSwift_Example-dummy.m */; };
-		DA6EDABF74C3C6E9F9997B698195D6A2 /* Prime Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5263FD0636A0D234DF68B85EB7B8A8 /* Prime Test.swift */; };
-		DCA9F40F7EA5A2D24D3A0CEF0B188DF0 /* ScaleKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5631DFA171A14DE39F3B6D93D0378C /* ScaleKeyedDecodingContainer.swift */; };
-		DDA8E54FFAA6DFF7E15F15A52AB7C662 /* Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37D3AD27CCE751F6D63FB7F87163613 /* Hashable.swift */; };
-		E4A7207A022D9584CD9B7D29381C8454 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A55F1FD9FB05F72699586B50B91A969 /* GCD.swift */; };
-		E90058BA23F738EE158A2F73E9FF91A4 /* StringAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9418F0523C7EC7E4DF8A6121A8E70B2C /* StringAdapter.swift */; };
-		EC95784DCA76E26345C1E5090C1B1850 /* Bitwise Ops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6786DC739597A15ACAFC770446BD7B57 /* Bitwise Ops.swift */; };
-		F41028D4E0E43E885ED9ADDFABBE1ED3 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21FA016970A9B08BCAE43BE75F69E5F /* Comparable.swift */; };
-		F5F0562EFC8A4222EB84980F223E6C15 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B88D65E1FB896EAAC762B728A9BB5E /* Random.swift */; };
-		F7313213959EC3EE903F5E8CBC930811 /* ScaleDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3530AE8EADF3B42B19ECDB48B7BC2 /* ScaleDecoder.swift */; };
-		F81E16CDC41BE1CB2C103F910F5FFC70 /* Square Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E5028F35703F5C4B0857EA1CAE7618 /* Square Root.swift */; };
-		F95103DB3CDE985249C0B9E4CD464BA0 /* Integer Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B64ABCCBE236A9ECAF99111679E5D3 /* Integer Conversion.swift */; };
+		CD1D8E2306BB249462763A731D569BEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CEE0306F5240D2C37056707A29E40A94 /* DataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253A4659B7DDBF84290A54CB641B8C95 /* DataReader.swift */; };
+		D1691005C5FF403516FCA539B0E8038E /* Multiplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B006DF86BD5BCB990833837D641091A0 /* Multiplication.swift */; };
+		D1AE2F8D6BE22BD23370EE9607D815F5 /* ScaleEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026A907BD5B548C3EAB54CFEFE7E5752 /* ScaleEncoder.swift */; };
+		D6BF0D382E2E68028AAF3CA080E941E8 /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D0B1883317BB13908D5D1C49CF829 /* Addition.swift */; };
+		D9B1F196DCB14D942C88E3BFC3D39A9C /* Int128.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58AE4E318D1D2554A911486ADD071D0A /* Int128.swift */; };
+		DA6EDABF74C3C6E9F9997B698195D6A2 /* Prime Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7777134E02C0C9442FD4229FDF165CEC /* Prime Test.swift */; };
+		DDA8E54FFAA6DFF7E15F15A52AB7C662 /* Hashable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C39EF1DE8E1D5CA54F9B5E495307B5 /* Hashable.swift */; };
+		E4A7207A022D9584CD9B7D29381C8454 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978E7DEABDEF796F73C3F0A89429A522 /* GCD.swift */; };
+		E6988A3E22183C6BA99387A50C9E6C34 /* ScaleCodecSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F55603974518DE43349CF53971557B2E /* ScaleCodecSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB30580B0F85CA7B1AD17158FF3AB911 /* ScaleUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F88E1B81F1FB4A9826B20D735598BB /* ScaleUnkeyedDecodingContainer.swift */; };
+		EC95784DCA76E26345C1E5090C1B1850 /* Bitwise Ops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E7653F4E242BFFACA910F755F288D8 /* Bitwise Ops.swift */; };
+		F41028D4E0E43E885ED9ADDFABBE1ED3 /* Comparable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E637A50FB497682F62EA1D9E938A866 /* Comparable.swift */; };
+		F5F0562EFC8A4222EB84980F223E6C15 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CA31DE4D67990DCCB0CF7B633BA920 /* Random.swift */; };
+		F81E16CDC41BE1CB2C103F910F5FFC70 /* Square Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04DDEF8D6F0AE08DDDBC3DABDFBBDB9 /* Square Root.swift */; };
+		F95103DB3CDE985249C0B9E4CD464BA0 /* Integer Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3FA059CDAF09A943AAAC9583EA6551 /* Integer Conversion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		102F897B3D38B5870AC5631224453DBB /* PBXContainerItemProxy */ = {
+		22260E05487E9197685578D0068567D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 09DD83B7D075842A3A5105AD410BD38A;
 			remoteInfo = BigInt;
 		};
-		141E12F788ECA2580FD66FAE10D74848 /* PBXContainerItemProxy */ = {
+		28A947D0A813FB3957D03CB5A2A9A8EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C50D4B3AFFA687FE5F34E55DA533ABD5;
+			remoteInfo = CommonSwift;
+		};
+		2CF31B4869787A6AA4468DE1526C41FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09DD83B7D075842A3A5105AD410BD38A;
+			remoteInfo = BigInt;
+		};
+		59A8F37BA5C482FB59AB3B12AD0A2503 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 327EB852AC99FB550B56117AAF91EF30;
 			remoteInfo = ScaleCodecSwift;
 		};
-		2CE451DE10ACF784C50CD6815855958B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 09DD83B7D075842A3A5105AD410BD38A;
-			remoteInfo = BigInt;
-		};
-		9432C36635244FFE538BEE2865296771 /* PBXContainerItemProxy */ = {
+		7CF8E6E20F05DB70CD049CFDE8057FD0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 698A4B4F8D8337D9A69FD704AA980F2B;
 			remoteInfo = "Pods-ScaleCodecSwift_Example";
 		};
+		AD08E2CC7094C7FAF3332723093D8074 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09DD83B7D075842A3A5105AD410BD38A;
+			remoteInfo = BigInt;
+		};
+		F4729FCA4266028D5FF99B03D33B5BC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C50D4B3AFFA687FE5F34E55DA533ABD5;
+			remoteInfo = CommonSwift;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11920B89291FEAE6006C4E36 /* DataAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAdapter.swift; sourceTree = "<group>"; };
+		026A907BD5B548C3EAB54CFEFE7E5752 /* ScaleEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleEncoder.swift; sourceTree = "<group>"; };
+		0461039CD6BBDDA8CE2A441E1229AE3B /* Words and Bits.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Words and Bits.swift"; path = "Sources/Words and Bits.swift"; sourceTree = "<group>"; };
+		0812E35903AC862112CE239689ECFDD6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		106C4A5F632E6AAADB8296E66F065A2D /* BigInt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BigInt-umbrella.h"; sourceTree = "<group>"; };
 		12DC422EFF79957B8069405113195BF1 /* Pods-ScaleCodecSwift_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ScaleCodecSwift_Example"; path = Pods_ScaleCodecSwift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		153414D5B4C1A63F4306E78FFD2033F8 /* Data+hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Data+hex.swift"; sourceTree = "<group>"; };
-		169EF156A7043F57126EF1BBA75624B3 /* Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Codable.swift; path = Sources/Codable.swift; sourceTree = "<group>"; };
+		135C70EE66185DD8C2D66191F7F4C281 /* UInt128Adapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UInt128Adapter.swift; sourceTree = "<group>"; };
+		1395CB936E15F9A673D7C5371988DED9 /* Division.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Division.swift; path = Sources/Division.swift; sourceTree = "<group>"; };
 		17136B9A42DE29355C9CF00087C08668 /* Pods-ScaleCodecSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ScaleCodecSwift_Example-umbrella.h"; sourceTree = "<group>"; };
-		173576D5DD7EBFD9AF6E6A8BC2750977 /* Floating Point Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Floating Point Conversion.swift"; path = "Sources/Floating Point Conversion.swift"; sourceTree = "<group>"; };
 		1A477E3A591641C98C50E041AE0F0FB6 /* ScaleCodecSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ScaleCodecSwift; path = ScaleCodecSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		21ACE00CCD056C20D1BB7F94A3DC5E11 /* Shifts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shifts.swift; path = Sources/Shifts.swift; sourceTree = "<group>"; };
-		2A662754F67946FE36C80523F6F62A20 /* Division.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Division.swift; path = Sources/Division.swift; sourceTree = "<group>"; };
-		2E37C9409DCDDDE7523B26481DB4A484 /* BigInt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BigInt.modulemap; sourceTree = "<group>"; };
+		1C3EED44F6FCD3CC4CB1FEE0C04F9670 /* Exponentiation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Exponentiation.swift; path = Sources/Exponentiation.swift; sourceTree = "<group>"; };
+		1C9C7E86B55E11F223D36B6B1AA10B12 /* CommonSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CommonSwift-dummy.m"; sourceTree = "<group>"; };
+		1EB3F3DB3AAC605FBF13215670F57071 /* Int128Adapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Int128Adapter.swift; sourceTree = "<group>"; };
+		21CA31DE4D67990DCCB0CF7B633BA920 /* Random.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Random.swift; path = Sources/Random.swift; sourceTree = "<group>"; };
+		253A4659B7DDBF84290A54CB641B8C95 /* DataReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataReader.swift; sourceTree = "<group>"; };
+		2B52B1E19C5EA3DBBDE1B7F4EE7B73E2 /* ByteSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ByteSize.swift; path = CommonSwift/Classes/Numerics/Helpers/ByteSize.swift; sourceTree = "<group>"; };
+		2BA7CD6ED9A14C292B50D09C8ED2ACDD /* BigInt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BigInt.release.xcconfig; sourceTree = "<group>"; };
+		2C461ACE5FB74F9CD3307848CDCF602A /* BigInt-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BigInt-Info.plist"; sourceTree = "<group>"; };
+		2C8D1E31B848B9C5FE6ED07745404011 /* BigInt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BigInt-dummy.m"; sourceTree = "<group>"; };
 		2EF993197BD9800FDE7D12150A34E52A /* Pods-ScaleCodecSwift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ScaleCodecSwift_Example-Info.plist"; sourceTree = "<group>"; };
 		30A7FA10B2584C9C59D67483D5A1AA9C /* Pods-ScaleCodecSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScaleCodecSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		30E5028F35703F5C4B0857EA1CAE7618 /* Square Root.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Square Root.swift"; path = "Sources/Square Root.swift"; sourceTree = "<group>"; };
-		345711B15737C53BFABBD169E84C4ADA /* ScaleCodecSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScaleCodecSwift.debug.xcconfig; sourceTree = "<group>"; };
+		332D2A7A8454968F2AF938E9DB12A073 /* ScaleSingleValueDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleSingleValueDecodingContainer.swift; sourceTree = "<group>"; };
+		3591410E43AF0E5FC51401E58C094EBF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		36119FB2EF3F77986BBE4F29AEACDEE0 /* ScaleDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleDecoder.swift; sourceTree = "<group>"; };
+		38EF7104F5D873364F8612A68022222F /* UInt128.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UInt128.swift; path = CommonSwift/Classes/Numerics/UInt128.swift; sourceTree = "<group>"; };
 		3A02D1FE631581D18A4C5771EB0CC543 /* Pods-ScaleCodecSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ScaleCodecSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		3A9B2A7E71F1590E3F6B4C7705B515BF /* Int256.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Int256.swift; path = CommonSwift/Classes/Numerics/Int256.swift; sourceTree = "<group>"; };
+		3C005B2E611F5B56A6D2AB8648017FEE /* ScaleCodecSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScaleCodecSwift-prefix.pch"; sourceTree = "<group>"; };
 		3C3FC26F046FB97250E1E9B28CD71683 /* Pods-ScaleCodecSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ScaleCodecSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		40096DC7D18A9AD6E941B25BA6355381 /* ScaleCodecSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScaleCodecSwift-umbrella.h"; sourceTree = "<group>"; };
-		42CD9E0FE40EAA192F4C7195A9AE1D18 /* BigInt-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BigInt-Info.plist"; sourceTree = "<group>"; };
-		466D8EDB2105060876C76BC168C1D9A9 /* Data Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data Conversion.swift"; path = "Sources/Data Conversion.swift"; sourceTree = "<group>"; };
-		4694FC2B2A9BA47BC517B2437513A15A /* DataReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataReader.swift; sourceTree = "<group>"; };
+		3C9486A966DCC1CDDBE3D7F8008D2E5A /* BigInt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BigInt.modulemap; sourceTree = "<group>"; };
+		3D088D73A301EEB87A18DC2AD2600EF2 /* ScaleCodecAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleCodecAdapter.swift; sourceTree = "<group>"; };
+		3EB6CB12D23D07605B7862BFEB1C0759 /* Int512.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Int512.swift; path = CommonSwift/Classes/Numerics/Int512.swift; sourceTree = "<group>"; };
+		3F60E551C65AB26790D4576CA614EB83 /* OptionalAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OptionalAdapter.swift; sourceTree = "<group>"; };
+		48EC62049E8B6ED705151CD56D4525F9 /* ScaleKeyedEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleKeyedEncodingContainer.swift; sourceTree = "<group>"; };
 		4F73E606F0D95894FA5ADF03AFD5B85E /* Pods-ScaleCodecSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ScaleCodecSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
-		537F3FBBACAE348B4D9AE4EE54847E63 /* ScaleCoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleCoder.swift; sourceTree = "<group>"; };
+		51A22963E79F116658280802F7332AA4 /* CommonSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CommonSwift.release.xcconfig; sourceTree = "<group>"; };
 		554507D500D7EAB7F11FE014A9E7982F /* Pods-ScaleCodecSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ScaleCodecSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
-		561313C03F5C34B3228AECDBB71AE33E /* ScaleCodecSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ScaleCodecSwift.modulemap; sourceTree = "<group>"; };
-		5935CD949EDC415D7B656CE91A78C385 /* ScaleCodecAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleCodecAdapter.swift; sourceTree = "<group>"; };
-		5B5631DFA171A14DE39F3B6D93D0378C /* ScaleKeyedDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleKeyedDecodingContainer.swift; sourceTree = "<group>"; };
-		5BEA896AB210B97BD868FD6C04EFA831 /* Strideable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Strideable.swift; path = Sources/Strideable.swift; sourceTree = "<group>"; };
-		5C4E374235E864CE98B91AACE877A9AE /* ScaleCodecSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ScaleCodecSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		5D0866DA6D3038DD38E5D125B7786DF9 /* Multiplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Multiplication.swift; path = Sources/Multiplication.swift; sourceTree = "<group>"; };
-		60654E27309582F2E2CF66F932882163 /* BigUIntAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BigUIntAdapter.swift; sourceTree = "<group>"; };
-		613CD37C765631595038416D8D4E0F5A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		62F3C0C287A51DF6E535C334E2CBC3AA /* BigInt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BigInt-umbrella.h"; sourceTree = "<group>"; };
-		6786DC739597A15ACAFC770446BD7B57 /* Bitwise Ops.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bitwise Ops.swift"; path = "Sources/Bitwise Ops.swift"; sourceTree = "<group>"; };
-		7006853CEACA931F1E403E7B37D22769 /* ScaleCodecSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScaleCodecSwift-prefix.pch"; sourceTree = "<group>"; };
+		564E1FB549B0AB2360990F189E958169 /* Int256Adapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Int256Adapter.swift; sourceTree = "<group>"; };
+		570AC1EB11CD0467E2B586C5C567C58A /* ScaleCodecSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ScaleCodecSwift.modulemap; sourceTree = "<group>"; };
+		58AE4E318D1D2554A911486ADD071D0A /* Int128.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Int128.swift; path = CommonSwift/Classes/Numerics/Int128.swift; sourceTree = "<group>"; };
+		59874D50AD2D3B275812A19AAA48047E /* ScaleUnkeyedEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleUnkeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		5A13D256CC352B94BF7B93737AB8CB89 /* Subtraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subtraction.swift; path = Sources/Subtraction.swift; sourceTree = "<group>"; };
+		6195BFCF8E71A2B5B2DFAA099520099A /* UInt512Adapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UInt512Adapter.swift; sourceTree = "<group>"; };
+		67C39EF1DE8E1D5CA54F9B5E495307B5 /* Hashable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Hashable.swift; path = Sources/Hashable.swift; sourceTree = "<group>"; };
+		68C7E2D8BBB13FE9F3ECF7A6081CA180 /* UInt512.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UInt512.swift; path = CommonSwift/Classes/Numerics/UInt512.swift; sourceTree = "<group>"; };
+		68E15D9CAB7C84CD870BE104D444F9C9 /* StringAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringAdapter.swift; sourceTree = "<group>"; };
+		6A1B8A21CE78DF2424C86F4C7CC27D2D /* ScaleCodecSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScaleCodecSwift-dummy.m"; sourceTree = "<group>"; };
+		6BC441379812979B066B13863784B709 /* Data+Copy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Copy.swift"; path = "CommonSwift/Classes/Extensions/Data+Copy.swift"; sourceTree = "<group>"; };
+		6E62E3AAAEB6C93AA9837443ADCB4480 /* NumericAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumericAdapter.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		76B88D65E1FB896EAAC762B728A9BB5E /* Random.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Random.swift; path = Sources/Random.swift; sourceTree = "<group>"; };
+		75E7653F4E242BFFACA910F755F288D8 /* Bitwise Ops.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bitwise Ops.swift"; path = "Sources/Bitwise Ops.swift"; sourceTree = "<group>"; };
+		7777134E02C0C9442FD4229FDF165CEC /* Prime Test.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Prime Test.swift"; path = "Sources/Prime Test.swift"; sourceTree = "<group>"; };
 		79459316AB6480B2CC7C59762CB9878F /* Pods-ScaleCodecSwift_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ScaleCodecSwift_Tests"; path = Pods_ScaleCodecSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B55B46AC3EA908CFD3D98FB8784EDFE /* NumericAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumericAdapter.swift; sourceTree = "<group>"; };
-		7C475069664C80AAAB0D74D3575FFF7F /* BigInt-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BigInt-prefix.pch"; sourceTree = "<group>"; };
-		7DF5F7769A0EFA2387081FB7A981FFDA /* BigInt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BigInt-dummy.m"; sourceTree = "<group>"; };
-		7E6DD6C0A3208287CBFAD49A720A45C5 /* Words and Bits.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Words and Bits.swift"; path = "Sources/Words and Bits.swift"; sourceTree = "<group>"; };
-		80B71DF88AC123A88A13DF2570B787DF /* ScaleUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
-		82E30068AED0A1020E0B0381A4DAD91A /* ScaleEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleEncoder.swift; sourceTree = "<group>"; };
-		8A55F1FD9FB05F72699586B50B91A969 /* GCD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCD.swift; path = Sources/GCD.swift; sourceTree = "<group>"; };
-		8A60F3F90C8D52ED7546CF03D9FDEF1D /* ScaleCodecSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ScaleCodecSwift-Info.plist"; sourceTree = "<group>"; };
-		8C790681494CDC322851D2E191A8045B /* BigInt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BigInt.debug.xcconfig; sourceTree = "<group>"; };
+		794A220029B8A4D6523F9EB8F20B1115 /* Int512Adapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Int512Adapter.swift; sourceTree = "<group>"; };
+		7A5371DF09DE214D1B8B2AD96352DEAC /* CommonSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CommonSwift.modulemap; sourceTree = "<group>"; };
+		7CA5E35AA45D7CC49871298F0A648D52 /* DataAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DataAdapter.swift; sourceTree = "<group>"; };
+		7D2676885739EC3280FD54EEC04FE85C /* UInt256Adapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UInt256Adapter.swift; sourceTree = "<group>"; };
+		7E637A50FB497682F62EA1D9E938A866 /* Comparable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Comparable.swift; path = Sources/Comparable.swift; sourceTree = "<group>"; };
+		7EDE260CF9A9E764B667DE19D72F0B19 /* ScaleKeyedDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleKeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		8147406DE59C0AB30612B9D6E181F00B /* CommonSwift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CommonSwift; path = CommonSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CBC2063E57E6DA27AB74CAC99C0D91A /* ScaleCodecSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScaleCodecSwift.release.xcconfig; sourceTree = "<group>"; };
+		8E6BCD401745AC9940BCF05D423CC2AA /* CommonSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CommonSwift-prefix.pch"; sourceTree = "<group>"; };
+		8F78A37D8194FCCAF39EF4F71B3378FB /* Data Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data Conversion.swift"; path = "Sources/Data Conversion.swift"; sourceTree = "<group>"; };
+		9077C1BF73CE98B04FA17DA278420151 /* Strideable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Strideable.swift; path = Sources/Strideable.swift; sourceTree = "<group>"; };
+		91062952C196B62C9E9312F9236D84B0 /* ScaleCoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleCoder.swift; sourceTree = "<group>"; };
 		91BB24BA472AF523E913108C9AA301F2 /* BigInt */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BigInt; path = BigInt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9242AC0D88D59856495425A8C2A5CC07 /* ScaleSingleValueDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleSingleValueDecodingContainer.swift; sourceTree = "<group>"; };
 		92861781C07BBC936A71E6723017B321 /* Pods-ScaleCodecSwift_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ScaleCodecSwift_Tests-Info.plist"; sourceTree = "<group>"; };
 		92F58EAE3B4CE7913B4F77EF8B58CD5A /* Pods-ScaleCodecSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScaleCodecSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		9418F0523C7EC7E4DF8A6121A8E70B2C /* StringAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StringAdapter.swift; sourceTree = "<group>"; };
-		94B64ABCCBE236A9ECAF99111679E5D3 /* Integer Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Integer Conversion.swift"; path = "Sources/Integer Conversion.swift"; sourceTree = "<group>"; };
-		9A32D8F5937203751942B84436F0134B /* Subtraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Subtraction.swift; path = Sources/Subtraction.swift; sourceTree = "<group>"; };
-		9BAC165353F8C7AA7FBC64352F484FFE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		978E7DEABDEF796F73C3F0A89429A522 /* GCD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCD.swift; path = Sources/GCD.swift; sourceTree = "<group>"; };
+		9954EBF7FE28B60B374B0FD178B401B5 /* CommonSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CommonSwift-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A05EA4F8043D8616ED0F1BBA99A62D91 /* Pods-ScaleCodecSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ScaleCodecSwift_Example-dummy.m"; sourceTree = "<group>"; };
-		A37D3AD27CCE751F6D63FB7F87163613 /* Hashable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Hashable.swift; path = Sources/Hashable.swift; sourceTree = "<group>"; };
-		A54228E31E349D0522D5C6B75D0AB405 /* ScaleUnkeyedEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleUnkeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		A0DB343BB6739CA170F14A52281E5B69 /* ScaleSingleValueEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleSingleValueEncodingContainer.swift; sourceTree = "<group>"; };
+		A224906111AC18F55E008CC7750351D1 /* ScaleCodecSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ScaleCodecSwift-Info.plist"; sourceTree = "<group>"; };
+		A5EE325D11C6BB03D6F8D0E447D46B8A /* Shifts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shifts.swift; path = Sources/Shifts.swift; sourceTree = "<group>"; };
+		A6F88E1B81F1FB4A9826B20D735598BB /* ScaleUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
 		A951E762902FC12B5B2C72843F93ED74 /* Pods-ScaleCodecSwift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ScaleCodecSwift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		AC91BE3E219BFEFE55B42B85289C60CA /* BigInt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BigInt.release.xcconfig; sourceTree = "<group>"; };
-		B2104DF8346493FBC7A091696F38032E /* AdapterProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdapterProvider.swift; sourceTree = "<group>"; };
-		B7B3530AE8EADF3B42B19ECDB48B7BC2 /* ScaleDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleDecoder.swift; sourceTree = "<group>"; };
+		AB3FA059CDAF09A943AAAC9583EA6551 /* Integer Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Integer Conversion.swift"; path = "Sources/Integer Conversion.swift"; sourceTree = "<group>"; };
+		AE49B405D75C82B03829909622CA8EC4 /* ScaleCodecSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScaleCodecSwift.debug.xcconfig; sourceTree = "<group>"; };
+		AF7DBEC41C279246623C2715C80A22EF /* CommonSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CommonSwift-umbrella.h"; sourceTree = "<group>"; };
+		B006DF86BD5BCB990833837D641091A0 /* Multiplication.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Multiplication.swift; path = Sources/Multiplication.swift; sourceTree = "<group>"; };
 		BA2371A630C845BDDE44196FE65ADF4B /* Pods-ScaleCodecSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ScaleCodecSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C21FA016970A9B08BCAE43BE75F69E5F /* Comparable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Comparable.swift; path = Sources/Comparable.swift; sourceTree = "<group>"; };
+		BB85ABB2D5A5E329EAA7134E2626D48C /* UInt256.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UInt256.swift; path = CommonSwift/Classes/Numerics/UInt256.swift; sourceTree = "<group>"; };
+		C021EB6D9FC4A3D7B597850B7748DF1C /* BigInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BigInt.swift; path = Sources/BigInt.swift; sourceTree = "<group>"; };
+		C04DDEF8D6F0AE08DDDBC3DABDFBBDB9 /* Square Root.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Square Root.swift"; path = "Sources/Square Root.swift"; sourceTree = "<group>"; };
+		C08645A4418131AEC6B1C03CBCE981A8 /* Floating Point Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Floating Point Conversion.swift"; path = "Sources/Floating Point Conversion.swift"; sourceTree = "<group>"; };
 		C2BB3A2FB1E68AD1CF253D861ECB224A /* Pods-ScaleCodecSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ScaleCodecSwift_Tests.modulemap"; sourceTree = "<group>"; };
+		C583C6E5D000822FEF92A06274CC26BF /* BigInt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BigInt.debug.xcconfig; sourceTree = "<group>"; };
+		C7D9ECBF065D95B92A545D2BA3F94676 /* BigInt-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BigInt-prefix.pch"; sourceTree = "<group>"; };
 		CB409CD4B5CD269E7A867716FB9FEEE2 /* Pods-ScaleCodecSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScaleCodecSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
+		CB68373D115EE6C47566FC35A35FC0A5 /* AdapterProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdapterProvider.swift; sourceTree = "<group>"; };
 		CD440A8169B990032D42B41109BB0DC4 /* Pods-ScaleCodecSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ScaleCodecSwift_Example.modulemap"; sourceTree = "<group>"; };
-		D295DBF64DC93E26BFEA6565901E0A12 /* BigInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BigInt.swift; path = Sources/BigInt.swift; sourceTree = "<group>"; };
-		D3A05C3CB50F1BB03DF18E921ED153E0 /* BoolAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BoolAdapter.swift; sourceTree = "<group>"; };
+		CF0481A025F57D0F57F78A0CD363FA1F /* BoolAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BoolAdapter.swift; sourceTree = "<group>"; };
+		D0DB24FD29333E4EE9B1ECB0A8F99C27 /* DataHex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataHex.swift; path = CommonSwift/Classes/Hex/DataHex.swift; sourceTree = "<group>"; };
+		D185D7C2EA6915C1CC424A43728B880D /* Codable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Codable.swift; path = Sources/Codable.swift; sourceTree = "<group>"; };
+		D440BE90E2CDB61419C507FD110EB182 /* ArrayAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayAdapter.swift; sourceTree = "<group>"; };
+		D7DE04C17D4F79D96CC3481E98EB788C /* BigUIntAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BigUIntAdapter.swift; sourceTree = "<group>"; };
+		D7EF097230F3C1C3988F7291DEC1D16A /* BigUInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BigUInt.swift; path = Sources/BigUInt.swift; sourceTree = "<group>"; };
 		D982FD02CC7357A7A4CF334C65A14C00 /* Pods-ScaleCodecSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScaleCodecSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E1E61FC2BDAE799C8D330239D18FF574 /* Addition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Addition.swift; path = Sources/Addition.swift; sourceTree = "<group>"; };
-		E889C9BB9975426709BF787696F947E4 /* ScaleCodecSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScaleCodecSwift-dummy.m"; sourceTree = "<group>"; };
-		EA6377F6A52D57630522D67863CC476A /* BigUInt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BigUInt.swift; path = Sources/BigUInt.swift; sourceTree = "<group>"; };
-		EAD905C155A9AC5EBBDA0B60E4E8CA63 /* ScaleSingleValueEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleSingleValueEncodingContainer.swift; sourceTree = "<group>"; };
+		EE1D0B1883317BB13908D5D1C49CF829 /* Addition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Addition.swift; path = Sources/Addition.swift; sourceTree = "<group>"; };
 		EEE736A8BA616C773E2060E710CC1900 /* Pods-ScaleCodecSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ScaleCodecSwift_Tests-dummy.m"; sourceTree = "<group>"; };
-		EF5263FD0636A0D234DF68B85EB7B8A8 /* Prime Test.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Prime Test.swift"; path = "Sources/Prime Test.swift"; sourceTree = "<group>"; };
-		F2C376D07742F7ADA01311652D6C96E1 /* String Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String Conversion.swift"; path = "Sources/String Conversion.swift"; sourceTree = "<group>"; };
-		FB078826408FC96C3E7BD2B4B38D5B74 /* ScaleKeyedEncodingContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScaleKeyedEncodingContainer.swift; sourceTree = "<group>"; };
-		FE4825363B85FD67AC654A4D3C59BB67 /* ScaleCodecSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScaleCodecSwift.release.xcconfig; sourceTree = "<group>"; };
-		FE7728A2CD9AA973F06CD7F07BE1D052 /* Exponentiation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Exponentiation.swift; path = Sources/Exponentiation.swift; sourceTree = "<group>"; };
-		FF9D81B8D434962094B86EE40D060528 /* OptionalAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OptionalAdapter.swift; sourceTree = "<group>"; };
-		FFBDD3FADE65527135701034A5D46523 /* ArrayAdapter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayAdapter.swift; sourceTree = "<group>"; };
+		F0006ECF4311BF5205D97DB0DA7CB897 /* StringHex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringHex.swift; path = CommonSwift/Classes/Hex/StringHex.swift; sourceTree = "<group>"; };
+		F285A04A1EA9AF8101207FDA6FB51D81 /* ScaleCodecSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ScaleCodecSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F55603974518DE43349CF53971557B2E /* ScaleCodecSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScaleCodecSwift-umbrella.h"; sourceTree = "<group>"; };
+		F94442943A9400FE760069B3C5C5BB69 /* String Conversion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String Conversion.swift"; path = "Sources/String Conversion.swift"; sourceTree = "<group>"; };
+		FFA0AB7B3FC4F2EEDEC2C3F21C232028 /* CommonSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CommonSwift.debug.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,11 +250,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8AD03954C987B39DD1629FA21236DB24 /* Frameworks */ = {
+		57EB55DF0ED8FFA46F7BC24C7954B550 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44C9EB9D2AF855DE7157DB92FF0E22A6 /* Foundation.framework in Frameworks */,
+				CD1D8E2306BB249462763A731D569BEB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6428CC4D019142F3FAF588BB09D6528 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				010C1BB9A41E76C8CB0AB07DEE5D468A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,17 +274,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD87118FF724763840E4684B0C341A8D /* Frameworks */ = {
+		BFA60D988B5D13F423389533DF9B7E66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBC89EA26B7E9BFA01202A216BE9D5B3 /* Foundation.framework in Frameworks */,
+				B7048CB6045751EA7E9EFF8A3EA4FCB2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03EB849696766D30D8DF47A375A9B11A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A5371DF09DE214D1B8B2AD96352DEAC /* CommonSwift.modulemap */,
+				1C9C7E86B55E11F223D36B6B1AA10B12 /* CommonSwift-dummy.m */,
+				9954EBF7FE28B60B374B0FD178B401B5 /* CommonSwift-Info.plist */,
+				8E6BCD401745AC9940BCF05D423CC2AA /* CommonSwift-prefix.pch */,
+				AF7DBEC41C279246623C2715C80A22EF /* CommonSwift-umbrella.h */,
+				FFA0AB7B3FC4F2EEDEC2C3F21C232028 /* CommonSwift.debug.xcconfig */,
+				51A22963E79F116658280802F7332AA4 /* CommonSwift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CommonSwift";
+			sourceTree = "<group>";
+		};
 		10A01ED182FBB0D01D213FE8394E21C5 /* Pods-ScaleCodecSwift_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,61 +316,42 @@
 			path = "Target Support Files/Pods-ScaleCodecSwift_Tests";
 			sourceTree = "<group>";
 		};
-		18D911097FF2667BA292E0BA18DFCB55 /* Development Pods */ = {
+		1FA323DE02EF772D71BF6B5E602D6B19 /* CommonSwift */ = {
 			isa = PBXGroup;
 			children = (
-				E32AC3FEA46FCB38DD13089D69C35C6E /* ScaleCodecSwift */,
+				2B52B1E19C5EA3DBBDE1B7F4EE7B73E2 /* ByteSize.swift */,
+				6BC441379812979B066B13863784B709 /* Data+Copy.swift */,
+				D0DB24FD29333E4EE9B1ECB0A8F99C27 /* DataHex.swift */,
+				58AE4E318D1D2554A911486ADD071D0A /* Int128.swift */,
+				3A9B2A7E71F1590E3F6B4C7705B515BF /* Int256.swift */,
+				3EB6CB12D23D07605B7862BFEB1C0759 /* Int512.swift */,
+				F0006ECF4311BF5205D97DB0DA7CB897 /* StringHex.swift */,
+				38EF7104F5D873364F8612A68022222F /* UInt128.swift */,
+				BB85ABB2D5A5E329EAA7134E2626D48C /* UInt256.swift */,
+				68C7E2D8BBB13FE9F3ECF7A6081CA180 /* UInt512.swift */,
+				03EB849696766D30D8DF47A375A9B11A /* Support Files */,
 			);
-			name = "Development Pods";
+			name = CommonSwift;
+			path = CommonSwift;
 			sourceTree = "<group>";
 		};
-		20B8C50C303B6B40D556A8670F6076E4 /* Support Files */ = {
+		424BB502CD7199D886241D0CFAA12D4C /* Coder */ = {
 			isa = PBXGroup;
 			children = (
-				561313C03F5C34B3228AECDBB71AE33E /* ScaleCodecSwift.modulemap */,
-				E889C9BB9975426709BF787696F947E4 /* ScaleCodecSwift-dummy.m */,
-				8A60F3F90C8D52ED7546CF03D9FDEF1D /* ScaleCodecSwift-Info.plist */,
-				7006853CEACA931F1E403E7B37D22769 /* ScaleCodecSwift-prefix.pch */,
-				40096DC7D18A9AD6E941B25BA6355381 /* ScaleCodecSwift-umbrella.h */,
-				345711B15737C53BFABBD169E84C4ADA /* ScaleCodecSwift.debug.xcconfig */,
-				FE4825363B85FD67AC654A4D3C59BB67 /* ScaleCodecSwift.release.xcconfig */,
+				91062952C196B62C9E9312F9236D84B0 /* ScaleCoder.swift */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/ScaleCodecSwift";
+			name = Coder;
+			path = ScaleCodecSwift/Classes/Coder;
 			sourceTree = "<group>";
 		};
-		215A32142C26747C6C38C6FCF0A4F1C6 /* Adapters */ = {
+		5020BBD7FC48783C7F1725984A8C0A6C /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				FFBDD3FADE65527135701034A5D46523 /* ArrayAdapter.swift */,
-				60654E27309582F2E2CF66F932882163 /* BigUIntAdapter.swift */,
-				D3A05C3CB50F1BB03DF18E921ED153E0 /* BoolAdapter.swift */,
-				7B55B46AC3EA908CFD3D98FB8784EDFE /* NumericAdapter.swift */,
-				FF9D81B8D434962094B86EE40D060528 /* OptionalAdapter.swift */,
-				9418F0523C7EC7E4DF8A6121A8E70B2C /* StringAdapter.swift */,
-				11920B89291FEAE6006C4E36 /* DataAdapter.swift */,
+				0812E35903AC862112CE239689ECFDD6 /* LICENSE */,
+				3591410E43AF0E5FC51401E58C094EBF /* README.md */,
+				F285A04A1EA9AF8101207FDA6FB51D81 /* ScaleCodecSwift.podspec */,
 			);
-			name = Adapters;
-			path = ScaleCodecSwift/Classes/Adapters;
-			sourceTree = "<group>";
-		};
-		3576166BC0FF27D4505884022869E76A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				91BB24BA472AF523E913108C9AA301F2 /* BigInt */,
-				12DC422EFF79957B8069405113195BF1 /* Pods-ScaleCodecSwift_Example */,
-				79459316AB6480B2CC7C59762CB9878F /* Pods-ScaleCodecSwift_Tests */,
-				1A477E3A591641C98C50E041AE0F0FB6 /* ScaleCodecSwift */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		4852AD1F04C8BE01C9D27A9724172EAB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9E6A6DBB2762F621F9DF2889015B0C28 /* BigInt */,
-			);
-			name = Pods;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		53ED60ED824866DD8ED6251415F560D6 /* Pods-ScaleCodecSwift_Example */ = {
@@ -313,36 +379,73 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6981D60CAC97844B51A7CD6074462D86 /* Decoder */ = {
+		5BE482C94FE436A70885302EB76F2412 /* Scale */ = {
 			isa = PBXGroup;
 			children = (
-				B7B3530AE8EADF3B42B19ECDB48B7BC2 /* ScaleDecoder.swift */,
-				5B5631DFA171A14DE39F3B6D93D0378C /* ScaleKeyedDecodingContainer.swift */,
-				9242AC0D88D59856495425A8C2A5CC07 /* ScaleSingleValueDecodingContainer.swift */,
-				80B71DF88AC123A88A13DF2570B787DF /* ScaleUnkeyedDecodingContainer.swift */,
-			);
-			name = Decoder;
-			path = ScaleCodecSwift/Classes/Decoder;
-			sourceTree = "<group>";
-		};
-		6F0125D2702859576439FCE68F7EA21B /* Coder */ = {
-			isa = PBXGroup;
-			children = (
-				537F3FBBACAE348B4D9AE4EE54847E63 /* ScaleCoder.swift */,
-			);
-			name = Coder;
-			path = ScaleCodecSwift/Classes/Coder;
-			sourceTree = "<group>";
-		};
-		83A0EE9201FDE3BA6F90EBB16C68216A /* Scale */ = {
-			isa = PBXGroup;
-			children = (
-				B2104DF8346493FBC7A091696F38032E /* AdapterProvider.swift */,
-				4694FC2B2A9BA47BC517B2437513A15A /* DataReader.swift */,
-				5935CD949EDC415D7B656CE91A78C385 /* ScaleCodecAdapter.swift */,
+				CB68373D115EE6C47566FC35A35FC0A5 /* AdapterProvider.swift */,
+				253A4659B7DDBF84290A54CB641B8C95 /* DataReader.swift */,
+				3D088D73A301EEB87A18DC2AD2600EF2 /* ScaleCodecAdapter.swift */,
 			);
 			name = Scale;
 			path = ScaleCodecSwift/Classes/Scale;
+			sourceTree = "<group>";
+		};
+		690E64535F7669769ADAD44B3A99B79E /* ScaleCodecSwift */ = {
+			isa = PBXGroup;
+			children = (
+				8ED3663A2AD014C597C3A6F96C694CF8 /* Adapters */,
+				424BB502CD7199D886241D0CFAA12D4C /* Coder */,
+				6ECCC64AEE9837C2CD221C7BA9F4A3FA /* Decoder */,
+				C59545B145B12266282303C8FEE17392 /* Encoder */,
+				5020BBD7FC48783C7F1725984A8C0A6C /* Pod */,
+				5BE482C94FE436A70885302EB76F2412 /* Scale */,
+				9FF3A2C9D2CCED64202428810E3DE383 /* Support Files */,
+			);
+			name = ScaleCodecSwift;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		6D5592E9AB72698075187A7B902F6CF4 /* BigInt */ = {
+			isa = PBXGroup;
+			children = (
+				EE1D0B1883317BB13908D5D1C49CF829 /* Addition.swift */,
+				C021EB6D9FC4A3D7B597850B7748DF1C /* BigInt.swift */,
+				D7EF097230F3C1C3988F7291DEC1D16A /* BigUInt.swift */,
+				75E7653F4E242BFFACA910F755F288D8 /* Bitwise Ops.swift */,
+				D185D7C2EA6915C1CC424A43728B880D /* Codable.swift */,
+				7E637A50FB497682F62EA1D9E938A866 /* Comparable.swift */,
+				8F78A37D8194FCCAF39EF4F71B3378FB /* Data Conversion.swift */,
+				1395CB936E15F9A673D7C5371988DED9 /* Division.swift */,
+				1C3EED44F6FCD3CC4CB1FEE0C04F9670 /* Exponentiation.swift */,
+				C08645A4418131AEC6B1C03CBCE981A8 /* Floating Point Conversion.swift */,
+				978E7DEABDEF796F73C3F0A89429A522 /* GCD.swift */,
+				67C39EF1DE8E1D5CA54F9B5E495307B5 /* Hashable.swift */,
+				AB3FA059CDAF09A943AAAC9583EA6551 /* Integer Conversion.swift */,
+				B006DF86BD5BCB990833837D641091A0 /* Multiplication.swift */,
+				7777134E02C0C9442FD4229FDF165CEC /* Prime Test.swift */,
+				21CA31DE4D67990DCCB0CF7B633BA920 /* Random.swift */,
+				A5EE325D11C6BB03D6F8D0E447D46B8A /* Shifts.swift */,
+				C04DDEF8D6F0AE08DDDBC3DABDFBBDB9 /* Square Root.swift */,
+				9077C1BF73CE98B04FA17DA278420151 /* Strideable.swift */,
+				F94442943A9400FE760069B3C5C5BB69 /* String Conversion.swift */,
+				5A13D256CC352B94BF7B93737AB8CB89 /* Subtraction.swift */,
+				0461039CD6BBDDA8CE2A441E1229AE3B /* Words and Bits.swift */,
+				9F9D6C4F616D278B75FEEA4057E6EC71 /* Support Files */,
+			);
+			name = BigInt;
+			path = BigInt;
+			sourceTree = "<group>";
+		};
+		6ECCC64AEE9837C2CD221C7BA9F4A3FA /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				36119FB2EF3F77986BBE4F29AEACDEE0 /* ScaleDecoder.swift */,
+				7EDE260CF9A9E764B667DE19D72F0B19 /* ScaleKeyedDecodingContainer.swift */,
+				332D2A7A8454968F2AF938E9DB12A073 /* ScaleSingleValueDecodingContainer.swift */,
+				A6F88E1B81F1FB4A9826B20D735598BB /* ScaleUnkeyedDecodingContainer.swift */,
+			);
+			name = Decoder;
+			path = ScaleCodecSwift/Classes/Decoder;
 			sourceTree = "<group>";
 		};
 		8D70BBFAB3D3F1652C8290FC189E91CF /* Targets Support Files */ = {
@@ -354,44 +457,77 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		9E6A6DBB2762F621F9DF2889015B0C28 /* BigInt */ = {
+		8ED3663A2AD014C597C3A6F96C694CF8 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
-				E1E61FC2BDAE799C8D330239D18FF574 /* Addition.swift */,
-				D295DBF64DC93E26BFEA6565901E0A12 /* BigInt.swift */,
-				EA6377F6A52D57630522D67863CC476A /* BigUInt.swift */,
-				6786DC739597A15ACAFC770446BD7B57 /* Bitwise Ops.swift */,
-				169EF156A7043F57126EF1BBA75624B3 /* Codable.swift */,
-				C21FA016970A9B08BCAE43BE75F69E5F /* Comparable.swift */,
-				466D8EDB2105060876C76BC168C1D9A9 /* Data Conversion.swift */,
-				2A662754F67946FE36C80523F6F62A20 /* Division.swift */,
-				FE7728A2CD9AA973F06CD7F07BE1D052 /* Exponentiation.swift */,
-				173576D5DD7EBFD9AF6E6A8BC2750977 /* Floating Point Conversion.swift */,
-				8A55F1FD9FB05F72699586B50B91A969 /* GCD.swift */,
-				A37D3AD27CCE751F6D63FB7F87163613 /* Hashable.swift */,
-				94B64ABCCBE236A9ECAF99111679E5D3 /* Integer Conversion.swift */,
-				5D0866DA6D3038DD38E5D125B7786DF9 /* Multiplication.swift */,
-				EF5263FD0636A0D234DF68B85EB7B8A8 /* Prime Test.swift */,
-				76B88D65E1FB896EAAC762B728A9BB5E /* Random.swift */,
-				21ACE00CCD056C20D1BB7F94A3DC5E11 /* Shifts.swift */,
-				30E5028F35703F5C4B0857EA1CAE7618 /* Square Root.swift */,
-				5BEA896AB210B97BD868FD6C04EFA831 /* Strideable.swift */,
-				F2C376D07742F7ADA01311652D6C96E1 /* String Conversion.swift */,
-				9A32D8F5937203751942B84436F0134B /* Subtraction.swift */,
-				7E6DD6C0A3208287CBFAD49A720A45C5 /* Words and Bits.swift */,
-				DFE9F4269B17EF9A985AAB93610874CA /* Support Files */,
+				D440BE90E2CDB61419C507FD110EB182 /* ArrayAdapter.swift */,
+				D7DE04C17D4F79D96CC3481E98EB788C /* BigUIntAdapter.swift */,
+				CF0481A025F57D0F57F78A0CD363FA1F /* BoolAdapter.swift */,
+				7CA5E35AA45D7CC49871298F0A648D52 /* DataAdapter.swift */,
+				1EB3F3DB3AAC605FBF13215670F57071 /* Int128Adapter.swift */,
+				564E1FB549B0AB2360990F189E958169 /* Int256Adapter.swift */,
+				794A220029B8A4D6523F9EB8F20B1115 /* Int512Adapter.swift */,
+				6E62E3AAAEB6C93AA9837443ADCB4480 /* NumericAdapter.swift */,
+				3F60E551C65AB26790D4576CA614EB83 /* OptionalAdapter.swift */,
+				68E15D9CAB7C84CD870BE104D444F9C9 /* StringAdapter.swift */,
+				135C70EE66185DD8C2D66191F7F4C281 /* UInt128Adapter.swift */,
+				7D2676885739EC3280FD54EEC04FE85C /* UInt256Adapter.swift */,
+				6195BFCF8E71A2B5B2DFAA099520099A /* UInt512Adapter.swift */,
 			);
-			path = BigInt;
+			name = Adapters;
+			path = ScaleCodecSwift/Classes/Adapters;
+			sourceTree = "<group>";
+		};
+		9F9D6C4F616D278B75FEEA4057E6EC71 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3C9486A966DCC1CDDBE3D7F8008D2E5A /* BigInt.modulemap */,
+				2C8D1E31B848B9C5FE6ED07745404011 /* BigInt-dummy.m */,
+				2C461ACE5FB74F9CD3307848CDCF602A /* BigInt-Info.plist */,
+				C7D9ECBF065D95B92A545D2BA3F94676 /* BigInt-prefix.pch */,
+				106C4A5F632E6AAADB8296E66F065A2D /* BigInt-umbrella.h */,
+				C583C6E5D000822FEF92A06274CC26BF /* BigInt.debug.xcconfig */,
+				2BA7CD6ED9A14C292B50D09C8ED2ACDD /* BigInt.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BigInt";
+			sourceTree = "<group>";
+		};
+		9FF3A2C9D2CCED64202428810E3DE383 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				570AC1EB11CD0467E2B586C5C567C58A /* ScaleCodecSwift.modulemap */,
+				6A1B8A21CE78DF2424C86F4C7CC27D2D /* ScaleCodecSwift-dummy.m */,
+				A224906111AC18F55E008CC7750351D1 /* ScaleCodecSwift-Info.plist */,
+				3C005B2E611F5B56A6D2AB8648017FEE /* ScaleCodecSwift-prefix.pch */,
+				F55603974518DE43349CF53971557B2E /* ScaleCodecSwift-umbrella.h */,
+				AE49B405D75C82B03829909622CA8EC4 /* ScaleCodecSwift.debug.xcconfig */,
+				8CBC2063E57E6DA27AB74CAC99C0D91A /* ScaleCodecSwift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ScaleCodecSwift";
+			sourceTree = "<group>";
+		};
+		C59545B145B12266282303C8FEE17392 /* Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				026A907BD5B548C3EAB54CFEFE7E5752 /* ScaleEncoder.swift */,
+				48EC62049E8B6ED705151CD56D4525F9 /* ScaleKeyedEncodingContainer.swift */,
+				A0DB343BB6739CA170F14A52281E5B69 /* ScaleSingleValueEncodingContainer.swift */,
+				59874D50AD2D3B275812A19AAA48047E /* ScaleUnkeyedEncodingContainer.swift */,
+			);
+			name = Encoder;
+			path = ScaleCodecSwift/Classes/Encoder;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				18D911097FF2667BA292E0BA18DFCB55 /* Development Pods */,
+				DCBADE8C26C67C95A6A77C94BF2D4605 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				4852AD1F04C8BE01C9D27A9724172EAB /* Pods */,
-				3576166BC0FF27D4505884022869E76A /* Products */,
+				D6779AA2FAB8EFE5F553B9898B8BE700 /* Pods */,
+				DDE0A1B7E6FA5DF5A666FBE33F04EE48 /* Products */,
 				8D70BBFAB3D3F1652C8290FC189E91CF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -404,87 +540,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D5B99A991A85FB5B9AA4070B8D969291 /* Pod */ = {
+		D6779AA2FAB8EFE5F553B9898B8BE700 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				613CD37C765631595038416D8D4E0F5A /* LICENSE */,
-				9BAC165353F8C7AA7FBC64352F484FFE /* README.md */,
-				5C4E374235E864CE98B91AACE877A9AE /* ScaleCodecSwift.podspec */,
+				6D5592E9AB72698075187A7B902F6CF4 /* BigInt */,
+				1FA323DE02EF772D71BF6B5E602D6B19 /* CommonSwift */,
 			);
-			name = Pod;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		D9C47E603B306BD9C47025D436581A8D /* Extensions */ = {
+		DCBADE8C26C67C95A6A77C94BF2D4605 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				153414D5B4C1A63F4306E78FFD2033F8 /* Data+hex.swift */,
+				690E64535F7669769ADAD44B3A99B79E /* ScaleCodecSwift */,
 			);
-			name = Extensions;
-			path = ScaleCodecSwift/Classes/Extensions;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		DB950558B576406B6534A4E3DCBB16BA /* Encoder */ = {
+		DDE0A1B7E6FA5DF5A666FBE33F04EE48 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				82E30068AED0A1020E0B0381A4DAD91A /* ScaleEncoder.swift */,
-				FB078826408FC96C3E7BD2B4B38D5B74 /* ScaleKeyedEncodingContainer.swift */,
-				EAD905C155A9AC5EBBDA0B60E4E8CA63 /* ScaleSingleValueEncodingContainer.swift */,
-				A54228E31E349D0522D5C6B75D0AB405 /* ScaleUnkeyedEncodingContainer.swift */,
+				91BB24BA472AF523E913108C9AA301F2 /* BigInt */,
+				8147406DE59C0AB30612B9D6E181F00B /* CommonSwift */,
+				12DC422EFF79957B8069405113195BF1 /* Pods-ScaleCodecSwift_Example */,
+				79459316AB6480B2CC7C59762CB9878F /* Pods-ScaleCodecSwift_Tests */,
+				1A477E3A591641C98C50E041AE0F0FB6 /* ScaleCodecSwift */,
 			);
-			name = Encoder;
-			path = ScaleCodecSwift/Classes/Encoder;
-			sourceTree = "<group>";
-		};
-		DFE9F4269B17EF9A985AAB93610874CA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2E37C9409DCDDDE7523B26481DB4A484 /* BigInt.modulemap */,
-				7DF5F7769A0EFA2387081FB7A981FFDA /* BigInt-dummy.m */,
-				42CD9E0FE40EAA192F4C7195A9AE1D18 /* BigInt-Info.plist */,
-				7C475069664C80AAAB0D74D3575FFF7F /* BigInt-prefix.pch */,
-				62F3C0C287A51DF6E535C334E2CBC3AA /* BigInt-umbrella.h */,
-				8C790681494CDC322851D2E191A8045B /* BigInt.debug.xcconfig */,
-				AC91BE3E219BFEFE55B42B85289C60CA /* BigInt.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/BigInt";
-			sourceTree = "<group>";
-		};
-		E32AC3FEA46FCB38DD13089D69C35C6E /* ScaleCodecSwift */ = {
-			isa = PBXGroup;
-			children = (
-				83A0EE9201FDE3BA6F90EBB16C68216A /* Scale */,
-				215A32142C26747C6C38C6FCF0A4F1C6 /* Adapters */,
-				6F0125D2702859576439FCE68F7EA21B /* Coder */,
-				6981D60CAC97844B51A7CD6074462D86 /* Decoder */,
-				DB950558B576406B6534A4E3DCBB16BA /* Encoder */,
-				D9C47E603B306BD9C47025D436581A8D /* Extensions */,
-				D5B99A991A85FB5B9AA4070B8D969291 /* Pod */,
-				20B8C50C303B6B40D556A8670F6076E4 /* Support Files */,
-			);
-			name = ScaleCodecSwift;
-			path = ../..;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2A611EF8501F8F3E920C810843F77314 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2C477453516B4635B428E442A11B3FD6 /* ScaleCodecSwift-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3197C115BA27F8AA3B46FB1D53B55D40 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A4C039079F76B3B054F4748411E81F0A /* Pods-ScaleCodecSwift_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		32DA596662685778F05D01D89B471955 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -498,6 +585,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				3734824E06C05131A951DAAC4E363C77 /* Pods-ScaleCodecSwift_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E825A520DC8CB1F98D6938FFC8EBEE3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44896A5674D816C5834AD078AF9F077F /* CommonSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6FD2361A7E3FF5AE9D9C59A6D029582 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC7FDC2EBA26780BEFD82C3651D5B4D6 /* Pods-ScaleCodecSwift_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7CBB6B0E56DF98B441D43255BA0C5AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6988A3E22183C6BA99387A50C9E6C34 /* ScaleCodecSwift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,17 +635,18 @@
 		};
 		327EB852AC99FB550B56117AAF91EF30 /* ScaleCodecSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6D7C702DD6D3B6C80D096D99BFC65BE7 /* Build configuration list for PBXNativeTarget "ScaleCodecSwift" */;
+			buildConfigurationList = FB6091474C24C0D621E2E5F8E21B5815 /* Build configuration list for PBXNativeTarget "ScaleCodecSwift" */;
 			buildPhases = (
-				2A611EF8501F8F3E920C810843F77314 /* Headers */,
-				18D8C9B84A5541483DEE7B320ACB1315 /* Sources */,
-				8AD03954C987B39DD1629FA21236DB24 /* Frameworks */,
-				298295A4251DB2CA052D0C9F180FB41D /* Resources */,
+				A7CBB6B0E56DF98B441D43255BA0C5AA /* Headers */,
+				568F0C656D4817FBDE95829A638C1F87 /* Sources */,
+				57EB55DF0ED8FFA46F7BC24C7954B550 /* Frameworks */,
+				83DC8DDBBCE5D9F78EA7EDA1B8DA6C2C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4F606677B7B71CDA53C8D195ED9ADE21 /* PBXTargetDependency */,
+				3126215A81EFF55A5CCD37F915C94E4A /* PBXTargetDependency */,
+				79ABE24E34BA1EA45522043556F60B7D /* PBXTargetDependency */,
 			);
 			name = ScaleCodecSwift;
 			productName = ScaleCodecSwift;
@@ -553,7 +665,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2D444A99AC7B48F782CE8D09F27E7FEA /* PBXTargetDependency */,
+				FB3586401DB3F91977CFF7A5EAEDEDEA /* PBXTargetDependency */,
 			);
 			name = "Pods-ScaleCodecSwift_Tests";
 			productName = Pods_ScaleCodecSwift_Tests;
@@ -562,22 +674,42 @@
 		};
 		698A4B4F8D8337D9A69FD704AA980F2B /* Pods-ScaleCodecSwift_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 79DCCAD337F8EAC4E81C0D959B7F1F86 /* Build configuration list for PBXNativeTarget "Pods-ScaleCodecSwift_Example" */;
+			buildConfigurationList = 3451D7803D59294FD6534BB9D6454E4D /* Build configuration list for PBXNativeTarget "Pods-ScaleCodecSwift_Example" */;
 			buildPhases = (
-				3197C115BA27F8AA3B46FB1D53B55D40 /* Headers */,
-				A7FAE33515F3FA1DC1EFB21E62FF1F25 /* Sources */,
-				CD87118FF724763840E4684B0C341A8D /* Frameworks */,
-				3EEEDEE82B31578D220E5056356B56F3 /* Resources */,
+				A6FD2361A7E3FF5AE9D9C59A6D029582 /* Headers */,
+				1A1596EC4C9CB2BCB8660A59496CB2B8 /* Sources */,
+				BFA60D988B5D13F423389533DF9B7E66 /* Frameworks */,
+				3463CE064A090FA68BC75BF1B86CE940 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D66C9F868C58DB9A7304E6D81C0ED133 /* PBXTargetDependency */,
-				85C103AAB9627C29C7E3D435CE1FDDBB /* PBXTargetDependency */,
+				C6B6B92BC5B147452995F003C9B74C76 /* PBXTargetDependency */,
+				BE7D61235DFA7479D98E44ECBBBD50E4 /* PBXTargetDependency */,
+				F41C93DFE4EFA1E6915B106B7F81EAF9 /* PBXTargetDependency */,
 			);
 			name = "Pods-ScaleCodecSwift_Example";
 			productName = Pods_ScaleCodecSwift_Example;
 			productReference = 12DC422EFF79957B8069405113195BF1 /* Pods-ScaleCodecSwift_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+		C50D4B3AFFA687FE5F34E55DA533ABD5 /* CommonSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4C334915C61DB181EFC8779D8D2C3C5 /* Build configuration list for PBXNativeTarget "CommonSwift" */;
+			buildPhases = (
+				7E825A520DC8CB1F98D6938FFC8EBEE3 /* Headers */,
+				55FD53519352CA08A5C9A3FCFF465A84 /* Sources */,
+				A6428CC4D019142F3FAF588BB09D6528 /* Frameworks */,
+				95DA7F9540450EE52DC53689F87BDFBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15BA9E93C78515102A525800DAAB8EB8 /* PBXTargetDependency */,
+			);
+			name = CommonSwift;
+			productName = CommonSwift;
+			productReference = 8147406DE59C0AB30612B9D6E181F00B /* CommonSwift */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -598,11 +730,12 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 3576166BC0FF27D4505884022869E76A /* Products */;
+			productRefGroup = DDE0A1B7E6FA5DF5A666FBE33F04EE48 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				09DD83B7D075842A3A5105AD410BD38A /* BigInt */,
+				C50D4B3AFFA687FE5F34E55DA533ABD5 /* CommonSwift */,
 				698A4B4F8D8337D9A69FD704AA980F2B /* Pods-ScaleCodecSwift_Example */,
 				4DE821331547FCB6F55CFF6DC34D2BEB /* Pods-ScaleCodecSwift_Tests */,
 				327EB852AC99FB550B56117AAF91EF30 /* ScaleCodecSwift */,
@@ -611,7 +744,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		298295A4251DB2CA052D0C9F180FB41D /* Resources */ = {
+		3463CE064A090FA68BC75BF1B86CE940 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -625,7 +758,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3EEEDEE82B31578D220E5056356B56F3 /* Resources */ = {
+		83DC8DDBBCE5D9F78EA7EDA1B8DA6C2C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95DA7F9540450EE52DC53689F87BDFBE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -642,31 +782,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		18D8C9B84A5541483DEE7B320ACB1315 /* Sources */ = {
+		1A1596EC4C9CB2BCB8660A59496CB2B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				146B8009199A806CAAF05EC22E68153F /* AdapterProvider.swift in Sources */,
-				61E62F5659EAD71C91F0BB4B99811F50 /* ArrayAdapter.swift in Sources */,
-				9B650838C9170395D582148F482C4B3A /* BigUIntAdapter.swift in Sources */,
-				5DB2A44041C34D437518EF086325913B /* BoolAdapter.swift in Sources */,
-				18766FF32641A815633AD9C4A8E7CB67 /* Data+hex.swift in Sources */,
-				11920B8A291FEAE6006C4E36 /* DataAdapter.swift in Sources */,
-				AFBB78516F230BED1AE0D83F5D679E7D /* DataReader.swift in Sources */,
-				B33D91CC1057EBA560C38E6F19A6CC94 /* NumericAdapter.swift in Sources */,
-				2413805B06A41C801B1DAF42655B4834 /* OptionalAdapter.swift in Sources */,
-				5739D86AF61AF3D032F6FD37045593ED /* ScaleCodecAdapter.swift in Sources */,
-				96AC6857726A5403D3D789B8700FA154 /* ScaleCodecSwift-dummy.m in Sources */,
-				D6D8E0E68BB7856F75FF13D300ABF5D9 /* ScaleCoder.swift in Sources */,
-				F7313213959EC3EE903F5E8CBC930811 /* ScaleDecoder.swift in Sources */,
-				6796D61C64428AAD7B34AE9DD156E6C7 /* ScaleEncoder.swift in Sources */,
-				DCA9F40F7EA5A2D24D3A0CEF0B188DF0 /* ScaleKeyedDecodingContainer.swift in Sources */,
-				393F958C4330E9ACB60AF599C685D647 /* ScaleKeyedEncodingContainer.swift in Sources */,
-				CF1E80D95FE72D6D608931D0E6A93F7E /* ScaleSingleValueDecodingContainer.swift in Sources */,
-				5BE0231DBB026F7844BF04BBEE3151DF /* ScaleSingleValueEncodingContainer.swift in Sources */,
-				45B2DFCED9B2095FE5C15FA5A58D6877 /* ScaleUnkeyedDecodingContainer.swift in Sources */,
-				142C6B4A97438DA990DA8A341009E249 /* ScaleUnkeyedEncodingContainer.swift in Sources */,
-				E90058BA23F738EE158A2F73E9FF91A4 /* StringAdapter.swift in Sources */,
+				880E1167EF00335C0A17D5D272FAF446 /* Pods-ScaleCodecSwift_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,78 +828,105 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7FAE33515F3FA1DC1EFB21E62FF1F25 /* Sources */ = {
+		55FD53519352CA08A5C9A3FCFF465A84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D986CA1DB770692430BB93918951766F /* Pods-ScaleCodecSwift_Example-dummy.m in Sources */,
+				5AAF4A234B15D11E71D8A35CA2738AC6 /* ByteSize.swift in Sources */,
+				A4B6E4117E7B5B4B01B6AC71FE09FD14 /* CommonSwift-dummy.m in Sources */,
+				790D8FB8DEA2C334251A9E179E90AA52 /* Data+Copy.swift in Sources */,
+				108C8E55016CB69CBC19A92A6CE15066 /* DataHex.swift in Sources */,
+				D9B1F196DCB14D942C88E3BFC3D39A9C /* Int128.swift in Sources */,
+				19E8BE1D5F023E12B8CAA8277A6E11F8 /* Int256.swift in Sources */,
+				764F821BA98D8014DE0E1DA4EB4A8CFE /* Int512.swift in Sources */,
+				4EC6C6AA69F67460CE933C45C2E18FEB /* StringHex.swift in Sources */,
+				2443BBC0CC5DC5BFC3C0E07513B78F17 /* UInt128.swift in Sources */,
+				539DD8C51010B055B070673D464994C7 /* UInt256.swift in Sources */,
+				21469012E1A869A26A8BD7F7A8B53C66 /* UInt512.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		568F0C656D4817FBDE95829A638C1F87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0476F42B581CD6973DDF30706C2DD1B4 /* AdapterProvider.swift in Sources */,
+				C778C7619BC3AE9AA8D9D8D3C17CD9E6 /* ArrayAdapter.swift in Sources */,
+				7039910417370383C7313DAF80D488EF /* BigUIntAdapter.swift in Sources */,
+				20EB71D4D7CAE881C3494EF9E67587DF /* BoolAdapter.swift in Sources */,
+				B0D2E5CACB88D0F39088202DDE5C1FBA /* DataAdapter.swift in Sources */,
+				CEE0306F5240D2C37056707A29E40A94 /* DataReader.swift in Sources */,
+				09A14D8A7DF1C38846051289A75E7BB2 /* Int128Adapter.swift in Sources */,
+				960FA42CA948C4B58F5B3C24693EF534 /* Int256Adapter.swift in Sources */,
+				1B1B0BCB46B25D6A2798B3272282EE45 /* Int512Adapter.swift in Sources */,
+				0F5A45515D522379C27C5D2923FD5702 /* NumericAdapter.swift in Sources */,
+				C2860BF5D535DAB267AED4ECF1ACB349 /* OptionalAdapter.swift in Sources */,
+				73E9B0036C2C24EED5C0A1290047F699 /* ScaleCodecAdapter.swift in Sources */,
+				04AA8010F8B3354C7EF3B55A89F39E41 /* ScaleCodecSwift-dummy.m in Sources */,
+				B673B3554127281E407E4E09D7AD099A /* ScaleCoder.swift in Sources */,
+				40F8AA79E56A5973DAD6060B7821108F /* ScaleDecoder.swift in Sources */,
+				D1AE2F8D6BE22BD23370EE9607D815F5 /* ScaleEncoder.swift in Sources */,
+				BF2F5A2BD7B34AC41F0DBDDF0164DB4C /* ScaleKeyedDecodingContainer.swift in Sources */,
+				03F63ED84DE500C54A0340CFD7CA10CB /* ScaleKeyedEncodingContainer.swift in Sources */,
+				6AE4CDBB17D6C92EC0DC4E6A3CD824E6 /* ScaleSingleValueDecodingContainer.swift in Sources */,
+				4CC18D66ED24B323010FFB362D99447E /* ScaleSingleValueEncodingContainer.swift in Sources */,
+				EB30580B0F85CA7B1AD17158FF3AB911 /* ScaleUnkeyedDecodingContainer.swift in Sources */,
+				22A0337E9D1F344B67809B82D5698FAA /* ScaleUnkeyedEncodingContainer.swift in Sources */,
+				6EFDB9B52FD81648D5071EF0C184A74A /* StringAdapter.swift in Sources */,
+				B5D11800BB2FC2FC020694565B2EF412 /* UInt128Adapter.swift in Sources */,
+				5D175FE33157148CDC410E100DD75A20 /* UInt256Adapter.swift in Sources */,
+				977C1CC6D9D96A9E06111D02B7F3194F /* UInt512Adapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2D444A99AC7B48F782CE8D09F27E7FEA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-ScaleCodecSwift_Example";
-			target = 698A4B4F8D8337D9A69FD704AA980F2B /* Pods-ScaleCodecSwift_Example */;
-			targetProxy = 9432C36635244FFE538BEE2865296771 /* PBXContainerItemProxy */;
-		};
-		4F606677B7B71CDA53C8D195ED9ADE21 /* PBXTargetDependency */ = {
+		15BA9E93C78515102A525800DAAB8EB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BigInt;
 			target = 09DD83B7D075842A3A5105AD410BD38A /* BigInt */;
-			targetProxy = 2CE451DE10ACF784C50CD6815855958B /* PBXContainerItemProxy */;
+			targetProxy = AD08E2CC7094C7FAF3332723093D8074 /* PBXContainerItemProxy */;
 		};
-		85C103AAB9627C29C7E3D435CE1FDDBB /* PBXTargetDependency */ = {
+		3126215A81EFF55A5CCD37F915C94E4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BigInt;
+			target = 09DD83B7D075842A3A5105AD410BD38A /* BigInt */;
+			targetProxy = 22260E05487E9197685578D0068567D7 /* PBXContainerItemProxy */;
+		};
+		79ABE24E34BA1EA45522043556F60B7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CommonSwift;
+			target = C50D4B3AFFA687FE5F34E55DA533ABD5 /* CommonSwift */;
+			targetProxy = 28A947D0A813FB3957D03CB5A2A9A8EB /* PBXContainerItemProxy */;
+		};
+		BE7D61235DFA7479D98E44ECBBBD50E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CommonSwift;
+			target = C50D4B3AFFA687FE5F34E55DA533ABD5 /* CommonSwift */;
+			targetProxy = F4729FCA4266028D5FF99B03D33B5BC2 /* PBXContainerItemProxy */;
+		};
+		C6B6B92BC5B147452995F003C9B74C76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BigInt;
+			target = 09DD83B7D075842A3A5105AD410BD38A /* BigInt */;
+			targetProxy = 2CF31B4869787A6AA4468DE1526C41FF /* PBXContainerItemProxy */;
+		};
+		F41C93DFE4EFA1E6915B106B7F81EAF9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ScaleCodecSwift;
 			target = 327EB852AC99FB550B56117AAF91EF30 /* ScaleCodecSwift */;
-			targetProxy = 141E12F788ECA2580FD66FAE10D74848 /* PBXContainerItemProxy */;
+			targetProxy = 59A8F37BA5C482FB59AB3B12AD0A2503 /* PBXContainerItemProxy */;
 		};
-		D66C9F868C58DB9A7304E6D81C0ED133 /* PBXTargetDependency */ = {
+		FB3586401DB3F91977CFF7A5EAEDEDEA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = BigInt;
-			target = 09DD83B7D075842A3A5105AD410BD38A /* BigInt */;
-			targetProxy = 102F897B3D38B5870AC5631224453DBB /* PBXContainerItemProxy */;
+			name = "Pods-ScaleCodecSwift_Example";
+			target = 698A4B4F8D8337D9A69FD704AA980F2B /* Pods-ScaleCodecSwift_Example */;
+			targetProxy = 7CF8E6E20F05DB70CD049CFDE8057FD0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		01B8E8BA6E0A01B8999FE2D732EB6C46 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D982FD02CC7357A7A4CF334C65A14C00 /* Pods-ScaleCodecSwift_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-ScaleCodecSwift_Example/Pods-ScaleCodecSwift_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ScaleCodecSwift_Example/Pods-ScaleCodecSwift_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		0242E0BE2C6895049F8254342E5C8217 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 30A7FA10B2584C9C59D67483D5A1AA9C /* Pods-ScaleCodecSwift_Tests.debug.xcconfig */;
@@ -816,7 +963,7 @@
 		};
 		246EE9C5DC4F41DE20C9581A30247D42 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC91BE3E219BFEFE55B42B85289C60CA /* BigInt.release.xcconfig */;
+			baseConfigurationReference = 2BA7CD6ED9A14C292B50D09C8ED2ACDD /* BigInt.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -835,6 +982,39 @@
 				MODULEMAP_FILE = "Target Support Files/BigInt/BigInt.modulemap";
 				PRODUCT_MODULE_NAME = BigInt;
 				PRODUCT_NAME = BigInt;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		29948D0F121809D624BDF0888A707DC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CBC2063E57E6DA27AB74CAC99C0D91A /* ScaleCodecSwift.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ScaleCodecSwift/ScaleCodecSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ScaleCodecSwift/ScaleCodecSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ScaleCodecSwift/ScaleCodecSwift.modulemap";
+				PRODUCT_MODULE_NAME = ScaleCodecSwift;
+				PRODUCT_NAME = ScaleCodecSwift;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -880,6 +1060,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		7A73CD0592338D7BF13D81F3497E7611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFA0AB7B3FC4F2EEDEC2C3F21C232028 /* CommonSwift.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CommonSwift/CommonSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CommonSwift/CommonSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CommonSwift/CommonSwift.modulemap";
+				PRODUCT_MODULE_NAME = CommonSwift;
+				PRODUCT_NAME = CommonSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1002,15 +1214,16 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		CB3CDFFEA09BFE2267FA8A7271BC4F6E /* Debug */ = {
+		A64DB684D9C2F03395D90BF14F799770 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 345711B15737C53BFABBD169E84C4ADA /* ScaleCodecSwift.debug.xcconfig */;
+			baseConfigurationReference = AE49B405D75C82B03829909622CA8EC4 /* ScaleCodecSwift.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1040,10 +1253,11 @@
 			};
 			name = Debug;
 		};
-		DF2DF065A8B552BBC476E34C780C823B /* Release */ = {
+		B61E495CC68C05657C0A7F1E1E6A9FCE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE4825363B85FD67AC654A4D3C59BB67 /* ScaleCodecSwift.release.xcconfig */;
+			baseConfigurationReference = D982FD02CC7357A7A4CF334C65A14C00 /* Pods-ScaleCodecSwift_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1054,26 +1268,26 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ScaleCodecSwift/ScaleCodecSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ScaleCodecSwift/ScaleCodecSwift-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-ScaleCodecSwift_Example/Pods-ScaleCodecSwift_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ScaleCodecSwift/ScaleCodecSwift.modulemap";
-				PRODUCT_MODULE_NAME = ScaleCodecSwift;
-				PRODUCT_NAME = ScaleCodecSwift;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ScaleCodecSwift_Example/Pods-ScaleCodecSwift_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		EA4427060EC4B684CBB997E79806B016 /* Release */ = {
+		D28F1EEB7AD79FB52170BA40602602B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CB409CD4B5CD269E7A867716FB9FEEE2 /* Pods-ScaleCodecSwift_Example.release.xcconfig */;
 			buildSettings = {
@@ -1108,9 +1322,42 @@
 			};
 			name = Release;
 		};
+		F876E8A6F8A11D20AA7EBF2B0406F9A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51A22963E79F116658280802F7332AA4 /* CommonSwift.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CommonSwift/CommonSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CommonSwift/CommonSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CommonSwift/CommonSwift.modulemap";
+				PRODUCT_MODULE_NAME = CommonSwift;
+				PRODUCT_NAME = CommonSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		FCEB80C5319231FD85F88F79E79E8A8F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C790681494CDC322851D2E191A8045B /* BigInt.debug.xcconfig */;
+			baseConfigurationReference = C583C6E5D000822FEF92A06274CC26BF /* BigInt.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1142,6 +1389,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3451D7803D59294FD6534BB9D6454E4D /* Build configuration list for PBXNativeTarget "Pods-ScaleCodecSwift_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B61E495CC68C05657C0A7F1E1E6A9FCE /* Debug */,
+				D28F1EEB7AD79FB52170BA40602602B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1160,20 +1416,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6D7C702DD6D3B6C80D096D99BFC65BE7 /* Build configuration list for PBXNativeTarget "ScaleCodecSwift" */ = {
+		A4C334915C61DB181EFC8779D8D2C3C5 /* Build configuration list for PBXNativeTarget "CommonSwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB3CDFFEA09BFE2267FA8A7271BC4F6E /* Debug */,
-				DF2DF065A8B552BBC476E34C780C823B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		79DCCAD337F8EAC4E81C0D959B7F1F86 /* Build configuration list for PBXNativeTarget "Pods-ScaleCodecSwift_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				01B8E8BA6E0A01B8999FE2D732EB6C46 /* Debug */,
-				EA4427060EC4B684CBB997E79806B016 /* Release */,
+				7A73CD0592338D7BF13D81F3497E7611 /* Debug */,
+				F876E8A6F8A11D20AA7EBF2B0406F9A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1183,6 +1430,15 @@
 			buildConfigurations = (
 				0242E0BE2C6895049F8254342E5C8217 /* Debug */,
 				3B31C1FF0AA6E3B7CFF61080CC0529CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB6091474C24C0D621E2E5F8E21B5815 /* Build configuration list for PBXNativeTarget "ScaleCodecSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A64DB684D9C2F03395D90BF14F799770 /* Debug */,
+				29948D0F121809D624BDF0888A707DC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

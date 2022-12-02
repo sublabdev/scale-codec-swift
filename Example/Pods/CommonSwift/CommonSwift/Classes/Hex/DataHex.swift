@@ -1,6 +1,29 @@
 import Foundation
 
-extension Data {
+public class DataHex {
+    private let data: Data
+    
+    public init(data: Data) {
+        self.data = data
+    }
+    
+    public func encode(includePrefix: Bool = false) -> String {
+        let encoded = data.map { String(format: "%02x", $0) }.joined()
+        var prefix = ""
+        
+        if includePrefix {
+            prefix = "0x"
+        }
+        
+        return prefix + encoded
+    }
+}
+
+public extension Data {
+    var hex: DataHex {
+        .init(data: self)
+    }
+    
     init?(hex: String) {
         guard hex.count.isMultiple(of: 2) else { return nil }
         
@@ -16,9 +39,5 @@ extension Data {
         
         guard hex.count / bytes.count == 2 else { return nil }
         self.init(bytes)
-    }
-    
-    func hexString(prefix: Bool = true) -> String {
-        (prefix ? "0x" : "") + map { String(format: "%02hhx", $0) }.joined()
     }
 }

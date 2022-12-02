@@ -1,4 +1,5 @@
 import Foundation
+import CommonSwift
 
 struct TypeWrapper: Hashable {
     let type: Any.Type
@@ -149,6 +150,9 @@ final public class DefaultScaleCodecAdapterProvider: ScaleCodecAdapterProvider {
         provideInt32()
         provideInt()
         provideInt64()
+        provideInt128()
+        provideInt256()
+        provideInt512()
         
         // UInt
         provideUInt8()
@@ -156,6 +160,9 @@ final public class DefaultScaleCodecAdapterProvider: ScaleCodecAdapterProvider {
         provideUInt32()
         provideUInt()
         provideUInt64()
+        provideUInt128()
+        provideUInt256()
+        provideUInt512()
         
         // String
         provideString()
@@ -248,6 +255,48 @@ final public class DefaultScaleCodecAdapterProvider: ScaleCodecAdapterProvider {
         setAdapter(
             NumericAdapter<UInt64>(),
             for: UInt64.self
+        )
+    }
+    
+    private func provideInt128() {
+        setAdapter(
+            Int128Adapter(),
+            for: Int128.self
+        )
+    }
+    
+    private func provideUInt128() {
+        setAdapter(
+            UInt128Adapter(),
+            for: UInt128.self
+        )
+    }
+    
+    private func provideInt256() {
+        setAdapter(
+            Int256Adapter(),
+            for: Int256.self
+        )
+    }
+    
+    private func provideUInt256() {
+        setAdapter(
+            UInt256Adapter(),
+            for: UInt256.self
+        )
+    }
+    
+    private func provideInt512() {
+        setAdapter(
+            Int512Adapter(),
+            for: Int512.self
+        )
+    }
+    
+    private func provideUInt512() {
+        setAdapter(
+            UInt512Adapter(),
+            for: UInt512.self
         )
     }
     

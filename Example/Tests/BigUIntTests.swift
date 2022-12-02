@@ -1,6 +1,7 @@
 import XCTest
 @testable import ScaleCodecSwift
 import BigInt
+import CommonSwift
 
 class BigUIntTests: BaseTest<BigUInt> {
     private let predefinedTestCases: [(BigUInt, String)] = [
@@ -34,7 +35,7 @@ class BigUIntTests: BaseTest<BigUInt> {
             let data = Data(hex: hex)
            
             if encoded != data {
-                print("Value: \(value) encoded to \(encoded.hexString()) expected \(hex)")
+                print("Value: \(value) encoded to \(encoded.hex) expected \(hex)")
             }
             
             XCTAssertEqual(encoded, data)
