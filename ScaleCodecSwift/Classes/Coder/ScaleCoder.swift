@@ -11,4 +11,14 @@ public final class ScaleCoder {
         self.encoder = encoder
         self.decoder = decoder
     }
+    
+    /// Creates a default coder that handles all the standard types
+    /// - Returns: A default `ScaleCoder` created using the default adapter provider
+    public static func defaultCoder() -> ScaleCoder {
+        let defaultAdpaterProvider = DefaultScaleCodecAdapterProvider()
+        return .init(
+            encoder: ScaleEncoder(adapterProvider: defaultAdpaterProvider),
+            decoder: ScaleDecoder(adapterProvider: defaultAdpaterProvider)
+        )
+    }
 }

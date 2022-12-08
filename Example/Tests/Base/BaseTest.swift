@@ -7,7 +7,7 @@ class BaseTest<T: Codable>: XCTestCase where T: Equatable {
     var optionalAdapter: ScaleCodecAdapter<T?>?
     
     var coder: ScaleCoder {
-        DefaultScaleCodecAdapterProvider().coder
+        ScaleCoder.defaultCoder()
     }
     
     var testValues: [T]?
