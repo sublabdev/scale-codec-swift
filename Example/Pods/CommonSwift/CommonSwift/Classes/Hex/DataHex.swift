@@ -1,12 +1,20 @@
 import Foundation
 
+/// A Data converter to hex-encoded String
 public class DataHex {
     private let data: Data
     
+    /// Creates a Data converter to hex-encoded String
+    /// - Parameters:
+    ///     - data: The data that is encoded int hex String
     public init(data: Data) {
         self.data = data
     }
     
+    /// Encodes Data into hex String
+    /// - Parameters:
+    ///     - includePrefix: A flag indicating whether the prefix should be included or not. The default value is `false`
+    /// - Returns: A hex-encoded String
     public func encode(includePrefix: Bool = false) -> String {
         let encoded = data.map { String(format: "%02x", $0) }.joined()
         var prefix = ""
@@ -19,12 +27,16 @@ public class DataHex {
     }
 }
 
-public extension Data {
-    var hex: DataHex {
+extension Data {
+    /// Data to hex-encoded String converter
+    public var hex: DataHex {
         .init(data: self)
     }
     
-    init?(hex: String) {
+    /// Intializes a Data object from hex-encoded String
+    /// - Parameters:
+    ///     - hex: A hex-encoded String
+    public init?(hex: String) {
         guard hex.count.isMultiple(of: 2) else { return nil }
         
         var hex = hex

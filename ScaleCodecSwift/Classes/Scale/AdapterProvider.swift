@@ -1,6 +1,7 @@
 import Foundation
 import CommonSwift
 
+/// A wrapper over a type. The wrapper conforms to `Hashable` protocol, since it is used as a key when caching adapters
 struct TypeWrapper: Hashable {
     let type: Any.Type
     
@@ -13,10 +14,14 @@ struct TypeWrapper: Hashable {
     }
 }
 
+/// Scale codec adapter factory interface
 protocol ScaleCodecAdapterFactory {
+    /// Makes an adapter for a generic type `T`
+    /// - Returns: An adapter for a generic type `T`
     func make<T>() -> ScaleCodecAdapter<T>
 }
 
+/// Handles providing or creating of a `ScaleCodecAdapter` object
 struct AdapterProvider {
     let instance: (any ScaleCodecAdaptable)?
     let factory: ScaleCodecAdapterFactory?
@@ -26,24 +31,40 @@ struct AdapterProvider {
         self.factory = factory
     }
     
+    /// Creates or provides an existing (under it's `instance` property) adapter
+    /// - Returns: An adapter either created or cached
     func adapter<T>() -> ScaleCodecAdapter<T>? {
         (instance as? ScaleCodecAdapter<T>) ?? (factory?.make() as? ScaleCodecAdapter<T>) ?? nil
     }
 }
 
+/// An interface for a type that can be handled by `GenericAdapter`
 protocol ScaleGenericCodable {
+    /// An initializer of the type
+    /// - Parameters:
+    ///     - reader: DataReader with a data to encode/decode
+    ///     - coder:
     init(from reader: DataReader, coder: ScaleCoder) throws
+    /// Writes (encodes) a scale generic codable value via encoder
+    /// - Parameters:
+    ///     - coder: A coder that encodes the generic codable value
+    /// - Returns: An encoded Data
     func write(coder: ScaleCoder) throws -> Data
 }
 
+/// Generic adapter used for custom types that do not have their own adapter
 final class GenericAdapter<T>: ScaleCodecAdapter<T> {
-    
     private let coder: ScaleCoder
     
     init(coder: ScaleCoder) {
         self.coder = coder
     }
     
+    /// Reads (decodes) data to specified type
+    /// - Parameters:
+    ///     - type: The type to which should attempt to decode the data
+    ///     - reader: DataReader which contains the data that needs to be decoded and handles reading it
+    /// - Returns: Decoded value of the provided type
     override func read(_ type: T.Type, from reader: DataReader) throws -> T {
        if let type = type as? ScaleGenericCodable.Type {
             if let value = try type.init(from: reader, coder: coder) as? T {
@@ -57,6 +78,10 @@ final class GenericAdapter<T>: ScaleCodecAdapter<T> {
         throw ScaleCodecAdapterProvider.Error.noAdapterFound
     }
     
+    /// Writes (encodes) the value
+    /// - Parameters:
+    ///     - value: The value to encode
+    /// - Returns: The encoded Data
     override func write(value: T) throws -> Data {
         if let value = value as? ScaleGenericCodable {
             return try value.write(coder: coder)
@@ -66,7 +91,9 @@ final class GenericAdapter<T>: ScaleCodecAdapter<T> {
     }
 }
 
+/// Adapter provider that provides adapters based on the specified types
 open class ScaleCodecAdapterProvider {
+    /// Error cases that might appear while attempting to provide an adapter for a specified type
     enum Error: Swift.Error {
         case noOptionalAdapterProvided
         case noGenericAdapterProvided
@@ -85,6 +112,10 @@ open class ScaleCodecAdapterProvider {
     
     public init() { }
 
+    /// Provides an adapter for a specified type
+    /// - Parameters:
+    ///     - type: A generic type for which an adapter should be found
+    /// - Returns: An adapter for a provided type
     func adapter<T>(for type: T.Type) throws -> ScaleCodecAdapter<T> {
         if let adapter = (try adapterProvider(for: type)?.adapter()) as? ScaleCodecAdapter<T> {
             return adapter
@@ -93,6 +124,10 @@ open class ScaleCodecAdapterProvider {
         return try genericAdapter()
     }
     
+    /// Provides a generic adapter for a specified custom (or not directlye supported) type
+    /// - Parameters:
+    ///     - type: A generic type for which an adapter should be found
+    /// - Returns: A generic adapter for a provided custom (or not directly supported) type
     func genericAdapter<T>() throws -> ScaleCodecAdapter<T> {
         guard let adapter = _genericAdapter?.adapter() as? ScaleCodecAdapter<T> else {
             throw Error.noGenericAdapterProvided
@@ -101,6 +136,10 @@ open class ScaleCodecAdapterProvider {
         return adapter
     }
     
+    /// Provides an adapter provider for a specified type
+    /// - Parameters:
+    ///     - type: A generic type for which an adapter provider should be found
+    /// - Returns: An adapter provider for a provided type
     private func adapterProvider<T>(for type: T.Type) throws -> AdapterProvider? {
         if let provider = matchCache[TypeWrapper(type: type)] {
             return provider
@@ -109,14 +148,25 @@ open class ScaleCodecAdapterProvider {
         return adapters[TypeWrapper(type: type)]
     }
     
+    /// Caches an adapter for a specified type
+    /// - Parameters:
+    ///     - adapter: An adapter to cache
+    ///     - type: A type for which it needs to be cached
     func setAdapter<T>(_ adapter: ScaleCodecAdapter<T>, for type: T.Type) {
         adapters[TypeWrapper(type: type)] = .init(instance: adapter)
     }
     
+    // Caches an adapter using a factory for a specified type
+    /// - Parameters:
+    ///     - factory: A factory from which an adapter is created later
+    ///     - type: A type for which it needs to be cached
     func setAdapter<T>(_ factory: ScaleCodecAdapterFactory, for type: T.Type) {
         adapters[TypeWrapper(type: type)] = .init(factory: factory)
     }
     
+    /// Caches a generic adapter
+    /// - Parameters:
+    ///     - factory: A factory from which an adapter is created later
     func setGenericAdapter(_ factory: ScaleCodecAdapterFactory) {
         _genericAdapter = .init(factory: factory)
     }
@@ -135,7 +185,8 @@ private extension ScaleCodecAdapterProvider {
 }
 
 // MARK: - Default Adapter Provider
-
+/// Default scale codec adapter provider which provides adapter for the main by default supported types. The adapters for those types are set during the provider's initialization, so no additional step is required for that.
+/// Also, the coder for the provider can be accessed directly
 final public class DefaultScaleCodecAdapterProvider: ScaleCodecAdapterProvider {
     override public init() {
         super.init()
@@ -174,6 +225,7 @@ final public class DefaultScaleCodecAdapterProvider: ScaleCodecAdapterProvider {
         provideData()
     }
     
+    // Methods for setting adapters for specific types
     private func provideBool() {
         setAdapter(
             BoolAdapter(),
@@ -320,7 +372,7 @@ final public class DefaultScaleCodecAdapterProvider: ScaleCodecAdapterProvider {
 }
 
 // MARK: - GenericAdapterProviderFactory
-
+/// An adapter provider factory for a generic type
 struct GenericAdapterProviderFactory: ScaleCodecAdapterFactory {
     private let coder: ScaleCoder
     
@@ -328,6 +380,8 @@ struct GenericAdapterProviderFactory: ScaleCodecAdapterFactory {
         self.coder = coder
     }
     
+    /// Makes a generic adapter for a generic type `T`
+    /// - Returns: A generic adapter for a generic type `T`
     func make<T>() -> ScaleCodecAdapter<T> {
         GenericAdapter<T>(coder: coder)
     }

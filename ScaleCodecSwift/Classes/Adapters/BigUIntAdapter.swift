@@ -1,11 +1,13 @@
 import Foundation
 import BigInt
+import CommonSwift
 
 fileprivate enum BigUIntCompressingError: Swift.Error {
     case tooBigValue
     case noCompressedData
 }
 
+/// Adapter for BigUInt
 final class BigUIntAdapter: ScaleCodecAdapter<BigUInt> {
     private let coder: ScaleCoder
     
@@ -69,8 +71,8 @@ extension BigUInt: ScaleGenericCodable {
 
 
 // MARK: BigUInt Extension
-
 private extension BigUInt {
+    // Initializes BigUInt from a compressed data by adding the missing zeroes at the end
     init(compressedData: Data) throws {
         self.init()
         
@@ -90,36 +92,14 @@ private extension BigUInt {
         }
     }
     
+    /// Compresses `BigUInt`
+    /// - Returns: A `Data` from `BigUInt` without zeroes at the end
     func compressData() -> Data {
         Data(serialize().reversed()).removingZeroesAtEnd
     }
 }
 
 // MARK: - FixedWidthInteger Extension
-
 private extension FixedWidthInteger {
     static var byteWidth: Int { bitWidth / 8 }
-}
-
-// MARK: - Data Extension
-
-private extension Data {
-    var removingZeroesAtEnd: Data {
-        guard let offset = lastIndex(where: { $0 > 0 }) else {
-            return Data([0])
-        }
-    
-        return self[0...offset]
-    }
-    
-    func fillingZeroesAtEnd(byteWidth: Int) -> Data {
-        guard count != byteWidth else { return self }
-        
-        var data = self
-        for _ in 0..<(byteWidth - count) {
-            data.append(0)
-        }
-        
-        return data
-    }
 }

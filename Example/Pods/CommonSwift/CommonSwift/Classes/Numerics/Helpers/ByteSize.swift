@@ -1,5 +1,6 @@
 import Foundation
 
+/// Byte size types
 enum ByteSizeType {
     case int128
     case uInt128
@@ -9,6 +10,10 @@ enum ByteSizeType {
     case uInt512
 }
 
+/// The byte size based on the provided type
+/// - Parameters:
+///     - byteSizeType: The type of byte size
+///     - Returns: The size for a given type.
 func byteSize(byteSizeType: ByteSizeType) -> Int {
     switch byteSizeType {
     case .int128, .uInt128:

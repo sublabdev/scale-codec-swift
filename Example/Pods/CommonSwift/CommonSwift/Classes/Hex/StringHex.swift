@@ -1,12 +1,18 @@
 import Foundation
 
+/// A hex-encoded String to Data converter object
 public class StringHex {
     private let string: String
     
+    /// Creates a hex-encoded String to Data converter object
+    /// - Parameters:
+    ///     - string: Hex-encoded String to convert into Data
     public init(string: String) {
         self.string = string
     }
     
+    /// Converts hex-encoded String into Data
+    /// - Returns: Optional Data converted from hex-encoded String
     public func decode() -> Data? {
         let hexStr = string.dropFirst(string.hasPrefix("0x") ? 2 : 0)
         
@@ -30,6 +36,7 @@ public class StringHex {
 }
 
 public extension String {
+    /// Hex-encoded String to Data converter
     var hex: StringHex {
         .init(string: self)
     }

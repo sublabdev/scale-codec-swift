@@ -1,8 +1,7 @@
 import XCTest
 @testable import ScaleCodecSwift
 
-// TODO: Add missing tests
-
+// A basic test object. All other tests are the subclasses of this one
 class BaseTest<T: Codable>: XCTestCase where T: Equatable {
     var adapter: ScaleCodecAdapter<T>?
     var optionalAdapter: ScaleCodecAdapter<T?>?
