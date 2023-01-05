@@ -9,7 +9,7 @@ PODS:
   - SipHash (1.2.2)
 
 DEPENDENCIES:
-  - CommonSwift (from `https://github.com/sublabdev/common-swift.git`, commit `5bdbe0884ebbdaa8bec9b2f73133764c489d180f`)
+  - CommonSwift (from `https://github.com/sublabdev/common-swift.git`, commit `8186f9973bc43039ddd531c839fd718e81e3b243`)
   - ScaleCodecSwift (from `../`)
 
 SPEC REPOS:
@@ -19,14 +19,14 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   CommonSwift:
-    :commit: 5bdbe0884ebbdaa8bec9b2f73133764c489d180f
+    :commit: 8186f9973bc43039ddd531c839fd718e81e3b243
     :git: https://github.com/sublabdev/common-swift.git
   ScaleCodecSwift:
     :path: "../"
 
 CHECKOUT OPTIONS:
   CommonSwift:
-    :commit: 5bdbe0884ebbdaa8bec9b2f73133764c489d180f
+    :commit: 8186f9973bc43039ddd531c839fd718e81e3b243
     :git: https://github.com/sublabdev/common-swift.git
 
 SPEC CHECKSUMS:
@@ -35,6 +35,6 @@ SPEC CHECKSUMS:
   ScaleCodecSwift: 3ab853667fe800bd2e6867490a30136fc5bc0b15
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
 
-PODFILE CHECKSUM: 5849a129ff527fc459feb2496b316df9ab1f8b77
+PODFILE CHECKSUM: 3df1556c87fc395b8b4669511258a493c97628ad
 
 COCOAPODS: 1.11.3

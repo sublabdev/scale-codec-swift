@@ -21,4 +21,11 @@ public final class ScaleCoder {
             decoder: ScaleDecoder(adapterProvider: defaultAdpaterProvider)
         )
     }
+    
+    /// A transaction object for scale coded
+    /// - Returns: An object which is used to decode (by appending additional values if needed) and encode
+    /// `Codable` types
+    public func transaction() -> ScaleCodecTransaction {
+        ScaleCodecTransaction()
+    }
 }
