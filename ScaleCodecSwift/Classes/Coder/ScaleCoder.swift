@@ -14,7 +14,7 @@ public final class ScaleCoder {
     
     /// Creates a default coder that handles all the standard types
     /// - Returns: A default `ScaleCoder` created using the default adapter provider
-    public static func defaultCoder() -> ScaleCoder {
+    public static func `default`() -> ScaleCoder {
         let defaultAdpaterProvider = DefaultScaleCodecAdapterProvider()
         return .init(
             encoder: ScaleEncoder(adapterProvider: defaultAdpaterProvider),
@@ -26,6 +26,6 @@ public final class ScaleCoder {
     /// - Returns: An object which is used to decode (by appending additional values if needed) and encode
     /// `Codable` types
     public func transaction() -> ScaleCodecTransaction {
-        ScaleCodecTransaction()
+        ScaleCodecTransaction(encoder: encoder)
     }
 }
