@@ -12,14 +12,14 @@ public class ScaleCodecTransaction {
     
     /// Appends additional `Codable` objects to existing encoded data
     /// - Returns: Returns `self` with updated encoded data
-    func append<T: Codable>(obj: T) throws -> Self {
-        data += try encoder.encode(obj)
+    public func append<T: Codable>(_ value: T) throws -> Self {
+        data += try encoder.encode(value)
         return self
     }
     
     /// Decodes the existing encoded data
     /// - Returns: An accumulated data of previously encoded objects
-    func commit() -> Data {
+    public func commit() -> Data {
         data
     }
 }
