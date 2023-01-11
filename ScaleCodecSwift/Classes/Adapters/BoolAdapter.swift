@@ -2,6 +2,8 @@ import Foundation
 
 /// An adapter for Bool type
 public final class BoolAdapter: ScaleCodecAdapter<Bool> {
+    public override init() {}
+    
     override func read(_ type: Bool.Type, from reader: DataReader) throws -> Bool {
         try reader.readByte() == 1
     }
