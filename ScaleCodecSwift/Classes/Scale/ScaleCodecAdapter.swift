@@ -1,7 +1,7 @@
 import Foundation
 
 /// A default protocol to which all values used in `ScaleCodecAdapter` should conform
-protocol ScaleCodecAdaptable {
+public protocol ScaleCodecAdaptable {
 }
 
 /// Provides a default interface for adapters

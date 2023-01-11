@@ -15,7 +15,7 @@ struct TypeWrapper: Hashable {
 }
 
 /// Scale codec adapter factory interface
-protocol ScaleCodecAdapterFactory {
+public protocol ScaleCodecAdapterFactory {
     /// Makes an adapter for a generic type `T`
     /// - Returns: An adapter for a generic type `T`
     func make<T>() -> ScaleCodecAdapter<T>
