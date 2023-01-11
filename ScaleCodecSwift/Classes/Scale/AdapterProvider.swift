@@ -113,7 +113,7 @@ open class ScaleCodecAdapterProvider {
     /// - Parameters:
     ///     - type: A generic type for which an adapter should be found
     /// - Returns: An adapter for a provided type
-    func adapter<T>(for type: T.Type) throws -> ScaleCodecAdapter<T> {
+    public func adapter<T>(for type: T.Type) throws -> ScaleCodecAdapter<T> {
         if let adapter = (try adapterProvider(for: type)?.adapter()) as? ScaleCodecAdapter<T> {
             return adapter
         }
@@ -125,7 +125,7 @@ open class ScaleCodecAdapterProvider {
     /// - Parameters:
     ///     - type: A generic type for which an adapter should be found
     /// - Returns: A generic adapter for a provided custom (or not directly supported) type
-    func genericAdapter<T>() throws -> ScaleCodecAdapter<T> {
+    public func genericAdapter<T>() throws -> ScaleCodecAdapter<T> {
         guard let adapter = _genericAdapter?.adapter() as? ScaleCodecAdapter<T> else {
             throw Error.noGenericAdapterProvided
         }
@@ -149,7 +149,7 @@ open class ScaleCodecAdapterProvider {
     /// - Parameters:
     ///     - adapter: An adapter to cache
     ///     - type: A type for which it needs to be cached
-    func setAdapter<T>(_ adapter: ScaleCodecAdapter<T>, for type: T.Type) {
+    public func setAdapter<T>(_ adapter: ScaleCodecAdapter<T>, for type: T.Type) {
         adapters[TypeWrapper(type: type)] = .init(instance: adapter)
     }
     
@@ -157,14 +157,14 @@ open class ScaleCodecAdapterProvider {
     /// - Parameters:
     ///     - factory: A factory from which an adapter is created later
     ///     - type: A type for which it needs to be cached
-    func setAdapter<T>(_ factory: ScaleCodecAdapterFactory, for type: T.Type) {
+    public func setAdapter<T>(_ factory: ScaleCodecAdapterFactory, for type: T.Type) {
         adapters[TypeWrapper(type: type)] = .init(factory: factory)
     }
     
     /// Caches a generic adapter
     /// - Parameters:
     ///     - factory: A factory from which an adapter is created later
-    func setGenericAdapter(_ factory: ScaleCodecAdapterFactory) {
+    public func setGenericAdapter(_ factory: ScaleCodecAdapterFactory) {
         _genericAdapter = .init(factory: factory)
     }
 }
