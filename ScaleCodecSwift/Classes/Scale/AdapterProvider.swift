@@ -22,18 +22,18 @@ protocol ScaleCodecAdapterFactory {
 }
 
 /// Handles providing or creating of a `ScaleCodecAdapter` object
-struct AdapterProvider {
+public struct AdapterProvider {
     let instance: (any ScaleCodecAdaptable)?
     let factory: ScaleCodecAdapterFactory?
     
-    init(instance: (any ScaleCodecAdaptable)? = nil, factory: ScaleCodecAdapterFactory? = nil) {
+    public init(instance: (any ScaleCodecAdaptable)? = nil, factory: ScaleCodecAdapterFactory? = nil) {
         self.instance = instance
         self.factory = factory
     }
     
     /// Creates or provides an existing (under it's `instance` property) adapter
     /// - Returns: An adapter either created or cached
-    func adapter<T>() -> ScaleCodecAdapter<T>? {
+    public func adapter<T>() -> ScaleCodecAdapter<T>? {
         (instance as? ScaleCodecAdapter<T>) ?? (factory?.make() as? ScaleCodecAdapter<T>) ?? nil
     }
 }
