@@ -13,7 +13,7 @@ open class ScaleCodecAdapter<T>: ScaleCodecAdaptable {
     ///     - type: The type to which should attempt to decode the data
     ///     - reader: DataReader which contains the data that needs to be decoded and handles reading it
     /// - Returns: Decoded value of the provided type
-    public func read(_ type: T.Type, from reader: DataReader) throws -> T where T: Decodable {
+    open func read(_ type: T.Type, from reader: DataReader) throws -> T where T: Decodable {
         fatalError("not implemented")
     }
     
@@ -21,7 +21,7 @@ open class ScaleCodecAdapter<T>: ScaleCodecAdaptable {
     /// - Parameters:
     ///     - value: The value to encode
     /// - Returns: The encoded Data
-    public func write(value: T) throws -> Data where T: Encodable {
+    open func write(value: T) throws -> Data where T: Encodable {
         fatalError("not implemented")
     }
 }
