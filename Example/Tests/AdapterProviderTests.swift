@@ -4,10 +4,7 @@ import XCTest
 class AdapterProviderTests: XCTestCase {
     func testProvider() {
         let scaleAdapterProvider = ScaleCodecAdapterProvider()
-        let coder = ScaleCoder(
-            encoder: ScaleEncoder(adapterProvider: scaleAdapterProvider),
-            decoder: ScaleDecoder(adapterProvider: scaleAdapterProvider)
-        )
+        let coder = ScaleCoder(adapterProvider: scaleAdapterProvider)
         
         let adapter = StringAdapter(coder: coder)
         

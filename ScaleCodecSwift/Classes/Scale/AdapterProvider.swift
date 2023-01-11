@@ -105,10 +105,7 @@ open class ScaleCodecAdapterProvider {
     
     private var matchCache: [TypeWrapper: AdapterProvider] = [:]
     
-    lazy var coder = ScaleCoder(
-        encoder: ScaleEncoder(adapterProvider: self),
-        decoder: ScaleDecoder(adapterProvider: self)
-    )
+    lazy var coder = ScaleCoder(adapterProvider: self)
     
     public init() { }
 
