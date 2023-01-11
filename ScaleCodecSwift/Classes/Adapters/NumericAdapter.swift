@@ -4,7 +4,7 @@ import Foundation
 public class NumericAdapter<T: FixedWidthInteger>: ScaleCodecAdapter<T> where T: Codable {
     public override init() {}
     
-    override func read(_ type: T.Type, from reader: DataReader) throws -> T {
+    public override func read(_ type: T.Type, from reader: DataReader) throws -> T {
         let stride = MemoryLayout<T>.stride
         return Self.fromData(try reader.read(size: stride))
     }
@@ -17,7 +17,7 @@ public class NumericAdapter<T: FixedWidthInteger>: ScaleCodecAdapter<T> where T:
         T(littleEndian: data.withUnsafeBytes { $0.load(as: T.self) })
     }
     
-    override func write(value: T) throws -> Data {
+    public override func write(value: T) throws -> Data {
         Self.toData(value)
     }
     
