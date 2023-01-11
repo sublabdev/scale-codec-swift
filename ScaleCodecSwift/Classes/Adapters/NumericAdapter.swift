@@ -6,11 +6,22 @@ public class NumericAdapter<T: FixedWidthInteger>: ScaleCodecAdapter<T> where T:
     
     override func read(_ type: T.Type, from reader: DataReader) throws -> T {
         let stride = MemoryLayout<T>.stride
-        let bytes = try reader.read(size: stride)
-        return T(littleEndian: bytes.withUnsafeBytes { $0.load(as: T.self) })
+        return Self.fromData(try reader.read(size: stride))
+    }
+    
+    public static func fromData(_ data: Data) -> T {
+        fromData(data.map { $0 })
+    }
+    
+    static func fromData(_ data: [UInt8]) -> T {
+        T(littleEndian: data.withUnsafeBytes { $0.load(as: T.self) })
     }
     
     override func write(value: T) throws -> Data {
+        Self.toData(value)
+    }
+    
+    public static func toData(_ value: T) -> Data {
         var value = value
         return withUnsafeBytes(of: &value) { Data($0) }
     }
