@@ -2,7 +2,7 @@ import BigInt
 import Foundation
 
 /// An adapter for handling encoding and decoding of Arrays
-class ArrayAdapter<T: Codable>: ScaleCodecAdapter<[T]> {
+public class ArrayAdapter<T: Codable>: ScaleCodecAdapter<[T]> {
     private let coder: ScaleCoder
     
     init(coder: ScaleCoder) {

@@ -8,7 +8,7 @@ fileprivate enum BigUIntCompressingError: Swift.Error {
 }
 
 /// Adapter for BigUInt
-final class BigUIntAdapter: ScaleCodecAdapter<BigUInt> {
+public final class BigUIntAdapter: ScaleCodecAdapter<BigUInt> {
     private let coder: ScaleCoder
     
     init(coder: ScaleCoder) {
