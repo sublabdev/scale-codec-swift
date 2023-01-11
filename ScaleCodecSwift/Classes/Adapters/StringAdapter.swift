@@ -9,7 +9,7 @@ public class StringAdapter: ScaleCodecAdapter<String> {
     
     let dataAdapter: DataAdapter
     
-    init(coder: ScaleCoder) {
+    public init(coder: ScaleCoder) {
         dataAdapter = .init(coder: coder)
     }
     

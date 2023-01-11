@@ -5,7 +5,7 @@ import Foundation
 public class ArrayAdapter<T: Codable>: ScaleCodecAdapter<[T]> {
     private let coder: ScaleCoder
     
-    init(coder: ScaleCoder) {
+    public init(coder: ScaleCoder) {
         self.coder = coder
     }
     

@@ -4,7 +4,7 @@ import Foundation
 public class OptionalAdapter<T: Codable>: ScaleCodecAdapter<T?> {
     private let coder: ScaleCoder
     
-    init(coder: ScaleCoder) {
+    public init(coder: ScaleCoder) {
         self.coder = coder
     }
     

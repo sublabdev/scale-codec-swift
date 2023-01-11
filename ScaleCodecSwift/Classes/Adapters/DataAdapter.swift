@@ -4,7 +4,7 @@ import Foundation
 public class DataAdapter: ScaleCodecAdapter<Data> {
     let arrayAdapter: ArrayAdapter<UInt8>
     
-    init(coder: ScaleCoder) {
+    public init(coder: ScaleCoder) {
         arrayAdapter = .init(coder: coder)
     }
     

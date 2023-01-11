@@ -11,7 +11,7 @@ fileprivate enum BigUIntCompressingError: Swift.Error {
 public final class BigUIntAdapter: ScaleCodecAdapter<BigUInt> {
     private let coder: ScaleCoder
     
-    init(coder: ScaleCoder) {
+    public init(coder: ScaleCoder) {
         self.coder = coder
     }
 
