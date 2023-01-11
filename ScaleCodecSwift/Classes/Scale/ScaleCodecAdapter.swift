@@ -6,6 +6,8 @@ public protocol ScaleCodecAdaptable {
 
 /// Provides a default interface for adapters
 open class ScaleCodecAdapter<T>: ScaleCodecAdaptable {
+    public init() {}
+    
     /// Reads (decodes) data to specified type
     /// - Parameters:
     ///     - type: The type to which should attempt to decode the data
