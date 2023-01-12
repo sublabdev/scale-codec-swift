@@ -33,6 +33,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		A6AD4409798F9F0A3122ADBB /* Pods_ScaleCodecSwift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6C2341B483543A11ED7D71 /* Pods_ScaleCodecSwift_Example.framework */; };
+		C7542D55296FD3A500D4606D /* AdapterProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7542D54296FD3A500D4606D /* AdapterProtocolTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		8F6FF144D59E3C1045E7E601 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		94D9D7D0A540F3DBB2DB56D2 /* Pods-ScaleCodecSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScaleCodecSwift_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ScaleCodecSwift_Tests/Pods-ScaleCodecSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9F5545EEDDF89E927CBD079 /* Pods-ScaleCodecSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScaleCodecSwift_Example.debug.xcconfig"; path = "Target Support Files/Pods-ScaleCodecSwift_Example/Pods-ScaleCodecSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C7542D54296FD3A500D4606D /* AdapterProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdapterProtocolTests.swift; sourceTree = "<group>"; };
 		D51B06D7123C18EF5AC22025 /* Pods-ScaleCodecSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScaleCodecSwift_Example.release.xcconfig"; path = "Target Support Files/Pods-ScaleCodecSwift_Example/Pods-ScaleCodecSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D91F409B4E55A15F4F873D03 /* ScaleCodecSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ScaleCodecSwift.podspec; path = ../ScaleCodecSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
@@ -172,6 +174,7 @@
 			children = (
 				1111B34128FDDFF70019844F /* Types */,
 				1111B34628FDDFF70019844F /* Base */,
+				C7542D54296FD3A500D4606D /* AdapterProtocolTests.swift */,
 				1111B34328FDDFF70019844F /* AdapterProviderTests.swift */,
 				1111B34528FDDFF70019844F /* BigUIntTests.swift */,
 				1111B34A28FDDFF70019844F /* BoolTests.swift */,
@@ -423,6 +426,7 @@
 				11882BFF28FDE5E30029E4BD /* BoolTests.swift in Sources */,
 				11882C0528FDE5E80029E4BD /* BaseTest.swift in Sources */,
 				11882C0128FDE5E30029E4BD /* BigUIntTests.swift in Sources */,
+				C7542D55296FD3A500D4606D /* AdapterProtocolTests.swift in Sources */,
 				11353EA729397E1B00744B0B /* Int256Tests.swift in Sources */,
 				11882C0228FDE5E30029E4BD /* StringTests.swift in Sources */,
 				11353EA529397D4800744B0B /* UInt128Tests.swift in Sources */,

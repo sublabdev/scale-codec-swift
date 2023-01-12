@@ -5,7 +5,7 @@ import CommonSwift
 public class Int256Adapter: ScaleCodecAdapter<Int256> {
     public override init() {}
     
-    public override func read(_ type: Int256.Type, from reader: DataReader) throws -> Int256 {
+    public override func read(_ type: Int256.Type?, from reader: DataReader) throws -> Int256 {
         try Data(reader.read(size: Int256.size)).int256()
     }
     

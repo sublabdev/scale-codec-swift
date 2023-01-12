@@ -13,7 +13,7 @@ public final class DefaultGenericAdapter<T>: ScaleCodecAdapter<T> {
     ///     - type: The type to which should attempt to decode the data
     ///     - reader: DataReader which contains the data that needs to be decoded and handles reading it
     /// - Returns: Decoded value of the provided type
-    public override func read(_ type: T.Type, from reader: DataReader) throws -> T {
+    public override func read(_ type: T.Type?, from reader: DataReader) throws -> T {
        if let type = type as? ScaleGenericCodable.Type {
             if let value = try type.init(from: reader, coder: coder) as? T {
                 return value

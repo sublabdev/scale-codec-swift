@@ -10,7 +10,7 @@ final class GenericAdapter<T>: ScaleCodecAdapter<T> {
         super.init()
     }
     
-    override func read(_ type: T.Type, from reader: DataReader) throws -> T {
+    override func read(_ type: T.Type?, from reader: DataReader) throws -> T {
         for provider in providers {
             let offsetBeforeTry = reader.offset
             do {

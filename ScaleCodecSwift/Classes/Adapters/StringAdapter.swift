@@ -13,7 +13,7 @@ public class StringAdapter: ScaleCodecAdapter<String> {
         dataAdapter = .init(coder: coder)
     }
     
-    public override func read(_ type: String.Type, from reader: DataReader) throws -> String {
+    public override func read(_ type: String.Type?, from reader: DataReader) throws -> String {
         let data = try dataAdapter.read(Data.self, from: reader)
         
         guard let result = String(data: .init(data), encoding: .utf8) else {

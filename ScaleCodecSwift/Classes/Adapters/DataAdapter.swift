@@ -8,7 +8,7 @@ public class DataAdapter: ScaleCodecAdapter<Data> {
         arrayAdapter = .init(coder: coder)
     }
     
-    public override func read(_ type: Data.Type, from reader: DataReader) throws -> Data {
+    public override func read(_ type: Data.Type?, from reader: DataReader) throws -> Data {
         Data(try arrayAdapter.read([UInt8].self, from: reader))
     }
     

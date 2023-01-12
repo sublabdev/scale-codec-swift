@@ -9,7 +9,7 @@ public class ArrayAdapter<T: Codable>: ScaleCodecAdapter<[T]> {
         self.coder = coder
     }
     
-    public override func read(_ type: [T].Type, from reader: DataReader) throws -> [T] {
+    public override func read(_ type: [T].Type?, from reader: DataReader) throws -> [T] {
         let count = try coder.decoder.decode(BigUInt.self, from: reader)
         return try (0..<count).map { _ in try coder.decoder.decode(T.self, from: reader) }
     }

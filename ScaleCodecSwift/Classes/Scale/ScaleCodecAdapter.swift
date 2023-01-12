@@ -2,8 +2,8 @@ import Foundation
 
 /// A default protocol to which all values used in `ScaleCodecAdapter` should conform
 public protocol ScaleCodecAdaptable {
-    func tryRead<A>(_ type: A.Type, from reader: DataReader) throws -> A
-    func tryWrite<A>(value: A) throws -> Data
+    func tryRead(from reader: DataReader) throws -> Any
+    func tryWrite(value: Any) throws -> Data
 }
 
 /// Provides a default interface for adapters
@@ -19,20 +19,12 @@ open class ScaleCodecAdapter<T>: ScaleCodecAdaptable {
     ///     - type: The type to which should attempt to decode the data
     ///     - reader: DataReader which contains the data that needs to be decoded and handles reading it
     /// - Returns: Decoded value of the provided type
-    open func read(_ type: T.Type, from reader: DataReader) throws -> T {
+    open func read(_ type: T.Type?, from reader: DataReader) throws -> T {
         fatalError("not implemented")
     }
     
-    public func tryRead<A>(_ type: A.Type, from reader: DataReader) throws -> A {
-        guard let type = type as? T.Type else {
-            throw Error.typeMismatch
-        }
-        
-        guard let value = try read(type, from: reader) as? A else {
-            throw Error.typeMismatch
-        }
-        
-        return value
+    public func tryRead(from reader: DataReader) throws -> Any {
+        return try read(nil, from: reader)
     }
     
     /// Writes (encodes) the value
@@ -43,7 +35,7 @@ open class ScaleCodecAdapter<T>: ScaleCodecAdaptable {
         fatalError("not implemented")
     }
     
-    public func tryWrite<A>(value: A) throws -> Data {
+    public func tryWrite(value: Any) throws -> Data {
         guard let value = value as? T else {
             throw Error.typeMismatch
         }

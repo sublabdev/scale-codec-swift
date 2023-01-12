@@ -8,7 +8,7 @@ public class OptionalAdapter<T: Codable>: ScaleCodecAdapter<T?> {
         self.coder = coder
     }
     
-    public override func read(_ type: T?.Type, from reader: DataReader) throws -> T? {
+    public override func read(_ type: T?.Type?, from reader: DataReader) throws -> T? {
         let isNil = try reader.readByte() == 0
         
         guard !isNil else {

@@ -4,7 +4,7 @@ import Foundation
 public class NumericAdapter<T: FixedWidthInteger>: ScaleCodecAdapter<T> where T: Codable {
     public override init() {}
     
-    public override func read(_ type: T.Type, from reader: DataReader) throws -> T {
+    public override func read(_ type: T.Type?, from reader: DataReader) throws -> T {
         let stride = MemoryLayout<T>.stride
         return Self.fromData(try reader.read(size: stride))
     }

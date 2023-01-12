@@ -15,7 +15,7 @@ public final class BigUIntAdapter: ScaleCodecAdapter<BigUInt> {
         self.coder = coder
     }
 
-    public override func read(_ type: BigUInt.Type, from reader: DataReader) throws -> BigUInt {
+    public override func read(_ type: BigUInt.Type?, from reader: DataReader) throws -> BigUInt {
         let first = try coder.decoder.decode(UInt8.self, from: reader)
         let mode = first & 0b11
         let value = first | 0b11

@@ -4,7 +4,7 @@ import Foundation
 public final class BoolAdapter: ScaleCodecAdapter<Bool> {
     public override init() {}
     
-    public override func read(_ type: Bool.Type, from reader: DataReader) throws -> Bool {
+    public override func read(_ type: Bool.Type?, from reader: DataReader) throws -> Bool {
         try reader.readByte() == 1
     }
     
@@ -19,7 +19,7 @@ public final class OptionalBoolAdapter: ScaleCodecAdapter<Bool?> {
         case invalidValue(UInt8)
     }
     
-    public override func read(_ type: Bool?.Type, from reader: DataReader) throws -> Bool? {
+    public override func read(_ type: Bool?.Type?, from reader: DataReader) throws -> Bool? {
         switch try reader.readByte() {
         case 0: return nil
         case 1: return true
