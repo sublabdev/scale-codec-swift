@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '13.0'
   s.source_files = 'ScaleCodecSwift/Classes/**/*'
   
-  s.dependency 'BigInt', '~> 3.1'
+  s.dependency 'BigInt', '~> 5.0.0'
   s.dependency 'CommonSwift'
 end
