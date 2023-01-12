@@ -5,7 +5,7 @@ platform :ios, '13.0'
 target 'ScaleCodecSwift_Example' do
   pod 'ScaleCodecSwift', :path => '../'
   pod 'CommonSwift', :git => 'https://github.com/sublabdev/common-swift.git', :branch => 'dev'
-  pod 'BigInt', '~> 3.1'
+  pod 'BigInt'
 
   target 'ScaleCodecSwift_Tests' do
     inherit! :search_paths

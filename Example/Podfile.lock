@@ -9,7 +9,7 @@ PODS:
   - SipHash (1.2.2)
 
 DEPENDENCIES:
-  - BigInt (~> 3.1)
+  - BigInt
   - CommonSwift (from `https://github.com/sublabdev/common-swift.git`, branch `dev`)
   - ScaleCodecSwift (from `../`)
 
@@ -36,6 +36,6 @@ SPEC CHECKSUMS:
   ScaleCodecSwift: 3ab853667fe800bd2e6867490a30136fc5bc0b15
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
 
-PODFILE CHECKSUM: a089de6146273737dae23b86856ddc1cfcc15c92
+PODFILE CHECKSUM: 1a95faa77d7a036005bcfe079d3f5c22b423b9c7
 
 COCOAPODS: 1.11.3
