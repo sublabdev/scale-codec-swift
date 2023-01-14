@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   CommonSwift:
-    :commit: 4e79516b21c7a850a1447ac45c996b17647bc8d2
+    :commit: 24cc1514dedb0755a86ae8b6752778a4ff54fb95
     :git: https://github.com/sublabdev/common-swift.git
 
 SPEC CHECKSUMS:
