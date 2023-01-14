@@ -60,7 +60,7 @@ open class ScaleCodecAdapterProvider {
         adapters[TypeWrapper(type: type)] = .init(instance: adapter)
     }
     
-    // Caches an adapter using a factory for a specified type
+    /// Caches an adapter using a factory for a specified type
     /// - Parameters:
     ///     - factory: A factory from which an adapter is created later
     ///     - type: A type for which it needs to be cached
