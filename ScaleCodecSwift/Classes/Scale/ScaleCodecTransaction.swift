@@ -12,6 +12,7 @@ public class ScaleCodecTransaction {
     
     /// Appends additional `Codable` objects to existing encoded data
     /// - Returns: Returns `self` with updated encoded data
+    @discardableResult
     public func append<T: Codable>(_ value: T) throws -> Self {
         data += try encoder.encode(value)
         return self

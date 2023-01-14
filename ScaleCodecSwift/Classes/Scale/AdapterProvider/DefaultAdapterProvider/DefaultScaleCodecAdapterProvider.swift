@@ -120,6 +120,7 @@ final public class DefaultScaleCodecAdapterProvider: ScaleCodecAdapterProvider {
     
     private func provideData() {
         setAdapter(DataAdapter(coder: coder), for: Data.self)
+        setAdapter(ScaleEncodedDataAdapter(), for: ScaleEncodedData.self)
     }
     
     private func provideGeneric() {
