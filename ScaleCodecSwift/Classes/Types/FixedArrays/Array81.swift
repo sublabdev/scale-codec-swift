@@ -2,6 +2,7 @@ import Foundation
 
 // MARK: - Array81 + Encodable
 
+/// An array with 81 elements
 @propertyWrapper public struct Array81<Element> {
     public var wrappedValue: [Element]
     public init(wrappedValue: [Element]) {
@@ -12,6 +13,9 @@ import Foundation
 // MARK: - Array81 + Encodable
 
 extension Array81: Encodable where Element : Encodable {
+    // Encodes the array via provided encoder
+    /// - Parameters:
+    ///     - encoder: An encoder that is used to encode the array
     public func encode(to encoder: Encoder) throws {
         guard wrappedValue.count == 81 else { throw FixedArrayError.invalidSize }
         var container = encoder.unkeyedContainer()
@@ -22,6 +26,9 @@ extension Array81: Encodable where Element : Encodable {
 // MARK: - Array81 + Decodable
 
 extension Array81: Decodable where Element : Decodable {
+    /// Creates a fixed array with 81 elements using the provided decoder, by decoding its each element
+    /// - Parameters:
+    ///     - decoder: Decoder, used to create the array
     public init(from decoder: Decoder) throws {
         var container = try decoder.unkeyedContainer()
         wrappedValue = try (0..<81).map { _ in try container.decode(Element.self) }

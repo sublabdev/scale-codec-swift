@@ -2,6 +2,7 @@ import Foundation
 
 // MARK: - Array174 + Encodable
 
+/// An array with 174 elements
 @propertyWrapper public struct Array174<Element> {
     public var wrappedValue: [Element]
     public init(wrappedValue: [Element]) {
@@ -12,6 +13,9 @@ import Foundation
 // MARK: - Array174 + Encodable
 
 extension Array174: Encodable where Element : Encodable {
+    /// Encodes the array via provided encoder
+    /// - Parameters:
+    ///     - encoder: An encoder that is used to encode the array
     public func encode(to encoder: Encoder) throws {
         guard wrappedValue.count == 174 else { throw FixedArrayError.invalidSize }
         var container = encoder.unkeyedContainer()
@@ -22,6 +26,9 @@ extension Array174: Encodable where Element : Encodable {
 // MARK: - Array174 + Decodable
 
 extension Array174: Decodable where Element : Decodable {
+    /// Creates a fixed array with 174 elements using the provided decoder, by decoding its each element
+    /// - Parameters:
+    ///     - decoder: Decoder, used to create the array
     public init(from decoder: Decoder) throws {
         var container = try decoder.unkeyedContainer()
         wrappedValue = try (0..<174).map { _ in try container.decode(Element.self) }

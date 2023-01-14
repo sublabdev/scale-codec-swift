@@ -2,6 +2,7 @@ import Foundation
 
 // MARK: - Array93 + Encodable
 
+/// An array with 93 elements
 @propertyWrapper public struct Array93<Element> {
     public var wrappedValue: [Element]
     public init(wrappedValue: [Element]) {
@@ -12,6 +13,9 @@ import Foundation
 // MARK: - Array93 + Encodable
 
 extension Array93: Encodable where Element : Encodable {
+    /// Encodes the array via provided encoder
+    /// - Parameters:
+    ///     - encoder: An encoder that is used to encode the array
     public func encode(to encoder: Encoder) throws {
         guard wrappedValue.count == 93 else { throw FixedArrayError.invalidSize }
         var container = encoder.unkeyedContainer()
@@ -22,6 +26,9 @@ extension Array93: Encodable where Element : Encodable {
 // MARK: - Array93 + Decodable
 
 extension Array93: Decodable where Element : Decodable {
+    /// Creates a fixed array with 93 elements using the provided decoder, by decoding its each element
+    /// - Parameters:
+    ///     - decoder: Decoder, used to create the array
     public init(from decoder: Decoder) throws {
         var container = try decoder.unkeyedContainer()
         wrappedValue = try (0..<93).map { _ in try container.decode(Element.self) }
