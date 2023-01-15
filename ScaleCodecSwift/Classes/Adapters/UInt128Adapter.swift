@@ -20,7 +20,7 @@ import Foundation
 import CommonSwift
 
 /// An adapter to handle read and write operations for UInt128
-public class UInt128Adapter: ScaleCodecAdapter<UInt128> {
+public final class UInt128Adapter: ScaleCodecAdapter<UInt128> {
     public override init() {}
     
     public override func read(_ type: UInt128.Type?, from reader: DataReader) throws -> UInt128 {

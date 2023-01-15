@@ -19,7 +19,7 @@
 import Foundation
 
 /// A generic adapter that handles read and write operations for optionali types (conforming to `Codable` protocol)
-public class OptionalAdapter<T: Codable>: ScaleCodecAdapter<T?> {
+public final class OptionalAdapter<T: Codable>: ScaleCodecAdapter<T?> {
     private let coder: ScaleCoder
     
     public init(coder: ScaleCoder) {

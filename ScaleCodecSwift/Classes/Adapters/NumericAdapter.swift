@@ -19,7 +19,7 @@
 import Foundation
 
 /// A generic numeric adapter that handles read and write operations for numeric types (conforming to `FixedWidthInteger` protocol)
-public class NumericAdapter<T: FixedWidthInteger>: ScaleCodecAdapter<T> where T: Codable {
+public final class NumericAdapter<T: FixedWidthInteger>: ScaleCodecAdapter<T> where T: Codable {
     public override init() {}
     
     public override func read(_ type: T.Type?, from reader: DataReader) throws -> T {

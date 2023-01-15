@@ -20,7 +20,7 @@ import Foundation
 import CommonSwift
 
 /// An adapter to handle read and write operations for Int512
-public class Int512Adapter: ScaleCodecAdapter<Int512> {
+public final class Int512Adapter: ScaleCodecAdapter<Int512> {
     public override init() {}
     
     public override func read(_ type: Int512.Type?, from reader: DataReader) throws -> Int512 {

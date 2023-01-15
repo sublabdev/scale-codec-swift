@@ -20,7 +20,7 @@ import Foundation
 
 /// Handles Scale Codec transaction for `Codable` types. Provides an mechanism for encoding and appending multiple
 /// values, conforming to `Codable` and decode them.
-public class ScaleCodecTransaction {
+public final class ScaleCodecTransaction {
     private let encoder: ScaleEncoder
     private var data = Data()
     

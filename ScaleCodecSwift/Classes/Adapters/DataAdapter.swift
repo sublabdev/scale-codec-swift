@@ -19,7 +19,7 @@
 import Foundation
 
 /// An adapter to handle read and write operations for Data
-public class DataAdapter: ScaleCodecAdapter<Data> {
+public final class DataAdapter: ScaleCodecAdapter<Data> {
     let arrayAdapter: ArrayAdapter<UInt8>
     
     public init(coder: ScaleCoder) {
