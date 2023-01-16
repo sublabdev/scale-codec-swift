@@ -1,16 +1,37 @@
 PODS:
-  - ScaleCodecSwift (0.1.0)
+  - BigInt (5.0.0)
+  - CommonSwift (1.0.0):
+    - BigInt (~> 5.0.0)
+  - ScaleCodecSwift (1.0.0):
+    - BigInt (~> 5.0.0)
+    - CommonSwift
 
 DEPENDENCIES:
+  - BigInt
+  - CommonSwift (from `https://github.com/sublabdev/common-swift.git`, branch `dev`)
   - ScaleCodecSwift (from `../`)
 
+SPEC REPOS:
+  trunk:
+    - BigInt
+
 EXTERNAL SOURCES:
+  CommonSwift:
+    :branch: dev
+    :git: https://github.com/sublabdev/common-swift.git
   ScaleCodecSwift:
     :path: "../"
 
-SPEC CHECKSUMS:
-  ScaleCodecSwift: 179b6ddc31bb8528d380fd19166a2a9fddc03e86
+CHECKOUT OPTIONS:
+  CommonSwift:
+    :commit: 24cc1514dedb0755a86ae8b6752778a4ff54fb95
+    :git: https://github.com/sublabdev/common-swift.git
 
-PODFILE CHECKSUM: eef510782536c545ce866fb495ea308eae3f0286
+SPEC CHECKSUMS:
+  BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
+  CommonSwift: ad350f0e06c040e5cb660cd7154f947851c73fbd
+  ScaleCodecSwift: 2fa35cbc70c5634fdc0960cc6c712e917b2c688c
+
+PODFILE CHECKSUM: 1a95faa77d7a036005bcfe079d3f5c22b423b9c7
 
 COCOAPODS: 1.11.3
