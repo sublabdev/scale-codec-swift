@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "bigint",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/attaswift/BigInt.git",
+      "state" : {
+        "revision" : "19f5e8a48be155e34abb98a2bcf4a343316f0343",
+        "version" : "5.0.0"
+      }
+    },
+    {
+      "identity" : "common-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sublabdev/common-swift.git",
+      "state" : {
+        "revision" : "28234aeec57ce2ae96faa19afa5c8264abf69afd",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

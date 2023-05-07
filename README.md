@@ -7,7 +7,7 @@
 
 </div>
 
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/scale-codec-swift)](https://img.shields.io/cocoapods/v/scale-codec-swift)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/ScaleCodecSwift)](https://img.shields.io/cocoapods/v/ScaleCodecSwift)
 [![Swift](https://img.shields.io/badge/Swift-5.0.0-orange?style=flat-square)](https://img.shields.io/badge/Swift-5.0.0-Orange?style=flat-square)
 [![Telegram channel](https://img.shields.io/badge/chat-telegram-green.svg?logo=telegram)](https://t.me/sublabsupport)
 [![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
@@ -30,10 +30,22 @@ Our goal is to have more developers to come into the world of development of cli
 
 ## Installation
 
+### CocoaPods
+
 [CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 pod 'ScaleCodecSwift'
+```
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for automating the distribution of Swift code and is integrated into the `swift` compiler.
+
+Once you have your Swift package set up, adding ScaleCodecSwift as a dependency is as easy as adding it to the `dependencies` value of your `Package.swift`.
+
+```swift
+.package(url: "https://github.com/sublabdev/scale-codec-swift.git", from: "1.0.0")
 ```
 
 ## Documentation
