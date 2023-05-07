@@ -3,8 +3,8 @@ PODS:
   - CommonSwift (1.0.0):
     - BigInt (~> 5.0.0)
   - ScaleCodecSwift (1.0.0):
-    - BigInt (~> 5.0.0)
-    - CommonSwift
+    - BigInt (= 5.0.0)
+    - CommonSwift (= 1.0.0)
 
 DEPENDENCIES:
   - BigInt
@@ -30,8 +30,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
   CommonSwift: ad350f0e06c040e5cb660cd7154f947851c73fbd
-  ScaleCodecSwift: 2fa35cbc70c5634fdc0960cc6c712e917b2c688c
+  ScaleCodecSwift: cf981d2886dea6b0b253fe3a7b1e2cd4a665cd8e
 
 PODFILE CHECKSUM: 1a95faa77d7a036005bcfe079d3f5c22b423b9c7
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.1

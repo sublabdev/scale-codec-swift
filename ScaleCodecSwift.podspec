@@ -7,7 +7,8 @@ Pod::Spec.new do |s|
   s.author           = { 'Substrate Laboratory' => 'info@sublab.dev' }
   s.source           = { :git => 'https://github.com/sublabdev/scale-codec-swift.git', :tag => s.version.to_s }
   s.ios.deployment_target = '13.0'
-  s.source_files = 'ScaleCodecSwift/Classes/**/*'
-  s.dependency 'CommonSwift', '~> 1.0.0'
-  s.dependency 'BigInt', '~> 5.0.0'
+  s.osx.deployment_target = '10.15'
+  s.source_files = 'Sources/ScaleCodecSwift/**/*'
+  s.dependency 'CommonSwift', '1.0.0'
+  s.dependency 'BigInt', '5.0.0'
 end
